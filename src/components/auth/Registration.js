@@ -12,7 +12,7 @@ class Registration extends Component {
             email: '',
             password: '',
             password_confirmation: '',
-            avatar: '',
+            // avatar: '',
             registrationErrors: ''
 
         }
@@ -34,7 +34,7 @@ class Registration extends Component {
                 email: this.state.email,
                 password: this.state.password,
                 password_confirmation: this.state.password_confirmation,
-                avatar: this.state.avatar
+                // avatar: this.state.avatar
             }
         }, { withCredentials: true } 
         // ^^gives api permission to set cookie within our client - this is a MUST to have
@@ -98,14 +98,14 @@ class Registration extends Component {
                 <br />
                 <br />
 
-                <input
+                {/* <input
                 onChange={this.handleChange}
                 type="file"
                 accept="/images/*"
                 name="avatar"
                 // required
                 />
-                <br />
+                <br /> */}
 
                 {/* <Link to="/login">login</Link> */}
 
