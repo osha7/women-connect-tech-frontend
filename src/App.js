@@ -1,8 +1,8 @@
 import React from 'react';
+import './css/App.css';
+import { connect } from 'react-redux'
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import axios from 'axios';
-
-import './App.css';
 
 import Home from './components/Home';
 import Dashboard from './components/Dashboard';
@@ -90,4 +90,6 @@ class App extends React.Component {
   }
 }
 
-export default App;
+const mapStateToProps = (state) => ({ state })
+
+export default connect(mapStateToProps)(App);

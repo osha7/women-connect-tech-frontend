@@ -1,17 +1,35 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import './css/index.css';
 import App from './App';
-import * as serviceWorker from './serviceWorker';
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
+
+import rootReducer from './redux/reducers/combineReducers';
+
+const store = createStore(rootReducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
+
+// store is Redux single source of truth - only 1 store - avail to all children (if they need it)
+// never access the store directly - store is read-only
+// components will never access directly, they'll use 'connect' to access this store
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Provider store={store}>
+      <App />
+    </ Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+// WHERE STORE COMES FROM IN REACT (although we inherit it from REDUX):
+// function createStore(reducer) {
+//   let state = reducer( undefined, {type: "default"})
+//   return {
+//     dispatch: function(action){ state = reducer(state, action)},
+//     getState: function(){ state }
+//   }
+// }
+
+// Redux store includes both STATE & DISPATCH
+// dispatch is the function that is going to CHANGE STATE
