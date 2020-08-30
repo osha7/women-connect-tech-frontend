@@ -5,6 +5,7 @@ class JobsBoard extends React.Component {
         return (
         <div>
             <h1>You've Made It To Jobs!</h1>
+            <ul>List jobs here</ul>
             </div>
         )
     }

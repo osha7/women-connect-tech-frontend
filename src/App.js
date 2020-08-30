@@ -67,7 +67,8 @@ class App extends React.Component {
       <div className="App">
         <BrowserRouter>
         <div className="navbar">
-          <NavBar />  
+          <NavBar /> 
+           {/*if you need to pass props with Route, use render={callback function}, otherwise use component=  */}
           <Route exact path="/connect" component={Connect} />
           <Route exact path="/events" component={EventsBoard} />  
           <Route exact path="/jobs" component={JobsBoard} />
