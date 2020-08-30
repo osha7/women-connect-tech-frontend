@@ -33,7 +33,10 @@ export default class AvatarUploads extends React.Component {
               },
             body: newForm
         })
-        .catch(errors => ("avatar error", errors))
+        // .catch(errors => ("avatar error", errors))
+        .catch(error => {
+            console.log("avatar upload error", error)
+        })
     }
 
     render(){

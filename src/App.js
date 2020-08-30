@@ -6,6 +6,10 @@ import axios from 'axios';
 
 import Home from './components/Home';
 import Dashboard from './components/Dashboard';
+import NavBar from './components/navbar'
+import Connect from './components/connect'
+import EventsBoard from './components/eventsboard'
+import JobsBoard from './components/jobsboard'
 
 
 class App extends React.Component {
@@ -62,6 +66,12 @@ class App extends React.Component {
     return (
       <div className="App">
         <BrowserRouter>
+        <div className="navbar">
+          <NavBar />  
+          <Route exact path="/connect" component={Connect} />
+          <Route exact path="/events" component={EventsBoard} />  
+          <Route exact path="/jobs" component={JobsBoard} />
+        </div>
         <Switch>
           {/* <Route exact path={'/'} component={Home} /> */}
           <Route 
@@ -75,6 +85,7 @@ class App extends React.Component {
             />
           )}
           />
+
           {/* <Route exact path={'/dashboard'} component={Dashboard} /> */}
           <Route
           exact
@@ -83,6 +94,7 @@ class App extends React.Component {
             <Dashboard { ...props } loggedInStatus={this.state.loggedInStatus} />
           )}
           />
+
         </Switch>
         </BrowserRouter>
       </div>
