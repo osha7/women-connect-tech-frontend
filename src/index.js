@@ -2,13 +2,20 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './css/index.css';
 import App from './App';
-import { createStore } from 'redux';
+import { createStore, applyMiddleware, compose } from 'redux';
 import { Provider } from 'react-redux';
+// Provider is harnessing 'context' from React
+import thunk from 'redux-thunk'
+//the only point of redux-thunk is for organization - you can have async redux without it
 
 import rootReducer from './redux/reducers/combineReducers';
 
-const store = createStore(rootReducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
+const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
+const store = createStore(
+  rootReducer,
+  composeEnhancer(applyMiddleware(thunk)),
+);
 // store is Redux single source of truth - only 1 store - avail to all children (if they need it)
 // never access the store directly - store is read-only
 // components will never access directly, they'll use 'connect' to access this store
