@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { addJob } from '../../redux/actions/addJob';
+import { addJob } from '../../redux/actions/jobs/addJob';
 
 class JobsForm extends React.Component {
 

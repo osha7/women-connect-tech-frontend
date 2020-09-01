@@ -1,6 +1,6 @@
 import React from 'react';
 import Job from './job';
-import { getJobs } from '../../redux/actions/jobsActions';
+import { getJobs } from '../../redux/actions/jobs/getJobs';
 import { connect } from 'react-redux';
 import JobForm from './jobsform'
 
