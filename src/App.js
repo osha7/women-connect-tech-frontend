@@ -9,7 +9,7 @@ import Dashboard from './components/Dashboard';
 import NavBar from './components/navbar'
 import Connect from './components/connect/connect'
 import EventsBoard from './components/events/eventsboard'
-import JobsBoard from './components/jobs/jobsboard';
+import JobsContainer from './containers/jobs_container';
 
 
 
@@ -72,7 +72,7 @@ class App extends React.Component {
            {/*if you need to pass props with Route, use render={callback function}, otherwise use component=  */}
           <Route exact path="/connect" component={Connect} />
           <Route exact path="/events" component={EventsBoard} />  
-          <Route exact path="/jobs" component={JobsBoard} />
+          <Route exact path="/jobs" component={JobsContainer} />
         </div>
         <Switch>
           {/* <Route exact path={'/'} component={Home} /> */}

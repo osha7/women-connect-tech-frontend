@@ -2,7 +2,8 @@ import React from 'react';
 import Job from './job';
 import { getJobs } from '../../redux/actions/jobs/getJobs';
 import { connect } from 'react-redux';
-import JobForm from './jobsform'
+import deleteJob from '../../redux/actions/jobs/deleteJob'
+// import JobForm from './jobsform'
 
 class JobsBoard extends React.Component {
 
@@ -11,26 +12,14 @@ class JobsBoard extends React.Component {
     }
 
     render() {
-        // console.log(this.props)
-        let c = this.props.jobs.map(job => <Job key={job.id} title={job.title}/>)
-        if (c) {
-            return (
-        <div className="JobsBoard">
-            <h1>You've Made It To Jobs!</h1>
-            <div className="job-form">
-            <JobForm />
-            </div>
-            <br /> <br />
-            {/* <JobsContainer /> */}
+    //    console.log(this.props.jobs)
+        let c = this.props.jobs.map(job => <Job key={job.id} id={job.id} title={job.title} boundDeleteJob={this.props.boundDeleteJob}/>)
+        return (
             <div className="available-jobs">
                 <h3>Available Jobs:</h3>
                 <ul>{ c }</ul>
             </div>
-        </div>
         )
-            } else {
-                return <div></div>
-            }
     }
 }
 
@@ -43,7 +32,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        boundGetJobs: (jobs) => dispatch(getJobs(jobs))
+        boundGetJobs: (jobs) => dispatch(getJobs(jobs)),
+        boundDeleteJob: (id) => dispatch(deleteJob(id))
     }
 }
 

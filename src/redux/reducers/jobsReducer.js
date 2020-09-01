@@ -11,15 +11,21 @@ export default function jobsReducer(state = initialState, action) {
             return {jobs: action.payload}
 
         case 'ADD_JOB':
-            console.log("WE MADE IT INTO THE INVOICE REDUCER, YAY!", {...state.jobs}, action.payload)
+            // console.log("WE MADE IT INTO THE INVOICE REDUCER, YAY!", {...state.jobs}, action.payload)
             // action.payload
             // {...state.jobs}
             // return {...state, }
             // return {jobs: action.payload.jobs}
             // return {...state.jobs}, action.payload
-            return {...state.jobs}
-            
+            // return {...state.jobs}
+            const job = action.payload
+            return { ...state, jobs: [job, ...state.jobs] }
 
+        case 'DELETE_JOB':
+            // return console.log('made it to delete reducer', state.jobs, action.payload.id)
+            const jobs = state.jobs.filter(job => job.id !== action.payload.id)
+            return { jobs }
+    
         default:
             return state
 
