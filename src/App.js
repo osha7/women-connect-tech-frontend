@@ -7,9 +7,10 @@ import axios from 'axios';
 import Home from './components/Home';
 import Dashboard from './components/Dashboard';
 import NavBar from './components/navbar'
-import Connect from './components/connect'
-import EventsBoard from './components/eventsboard'
-import JobsBoard from './components/jobsboard'
+import Connect from './components/connect/connect'
+import EventsBoard from './components/events/eventsboard'
+import JobsBoard from './components/jobs/jobsboard';
+
 
 
 class App extends React.Component {

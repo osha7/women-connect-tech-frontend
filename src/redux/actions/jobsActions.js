@@ -37,5 +37,3 @@ export function addJobs() {
 // with THUNK we can write Action Creators that 
 // middleware is any bit of code that intercepts a process and changes outcome
 
-
-

@@ -1,7 +1,8 @@
 import React from 'react';
 import Job from './job';
-import { getJobs } from '../redux/actions/jobsActions';
+import { getJobs } from '../../redux/actions/jobsActions';
 import { connect } from 'react-redux';
+import JobForm from './jobsform'
 
 class JobsBoard extends React.Component {
 
@@ -14,8 +15,13 @@ class JobsBoard extends React.Component {
         return (
         <div className="JobsBoard">
             <h1>You've Made It To Jobs!</h1>
+            <div className="job-form">
+            <JobForm />
+            </div>
+            <br /> <br />
             {/* <JobsContainer /> */}
             <div className="available-jobs">
+                <h3>Available Jobs:</h3>
                 <ul>{ this.props.jobs.map(job => <Job key={job.id} title={job.title}/>)}</ul>
             </div>
         </div>

@@ -5,6 +5,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* background: rgb(45,20,44);
+  background: linear-gradient(0deg, rgba(45,20,44,1) 0%, rgba(238,64,64,1) 100%);
+  color: white; */
 }
 
 code {
@@ -19,3 +22,5 @@ ul {
 li {
   padding-left: .6em;
 }
+
+@import '~js-datepicker/dist/datepicker.min.css';
