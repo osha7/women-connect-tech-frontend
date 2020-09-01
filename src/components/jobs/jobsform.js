@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { addJob } from '../../redux/actions/addJobs';
+import { addJob } from '../../redux/actions/addJob';
 
 class JobsForm extends React.Component {
 
@@ -23,8 +23,8 @@ class JobsForm extends React.Component {
 
     handleOnSubmit = event => {
         event.preventDefault()
-        console.log(this.state)
-        // this.props.addJob(this.state)
+        // console.log(this.state)
+        this.props.addJob(this.state)
         this.setState({
             date: '',
             title: '',

@@ -12,7 +12,9 @@ class JobsBoard extends React.Component {
 
     render() {
         // console.log(this.props)
-        return (
+        let c = this.props.jobs.map(job => <Job key={job.id} title={job.title}/>)
+        if (c) {
+            return (
         <div className="JobsBoard">
             <h1>You've Made It To Jobs!</h1>
             <div className="job-form">
@@ -22,10 +24,13 @@ class JobsBoard extends React.Component {
             {/* <JobsContainer /> */}
             <div className="available-jobs">
                 <h3>Available Jobs:</h3>
-                <ul>{ this.props.jobs.map(job => <Job key={job.id} title={job.title}/>)}</ul>
+                <ul>{ c }</ul>
             </div>
         </div>
         )
+            } else {
+                return <div></div>
+            }
     }
 }
 

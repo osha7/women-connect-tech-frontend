@@ -27,12 +27,12 @@ export function getJobs(jobArray) {
 }
 
 
-const ADD_JOBS = "ADD_JOBS"
+// const ADD_JOBS = "ADD_JOBS"
 
-//action creators ==== the objects, themselves are actions
-export function addJobs() {
+// //action creators ==== the objects, themselves are actions
+// export function addJobs() {
 
-}
+// }
 
 // with THUNK we can write Action Creators that 
 // middleware is any bit of code that intercepts a process and changes outcome
