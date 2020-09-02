@@ -1,5 +1,5 @@
 import React from 'react';
-import Modal from '../components/jobs/modal.editJob';
+import Modal from '../components/jobs/modal_editJob';
 import TriggerButton from './triggerButton';
 
 export class Container extends React.Component {
@@ -29,6 +29,7 @@ export class Container extends React.Component {
       document.querySelector('html').classList.toggle('scroll-lock');
     };
     render() {
+        // console.log("modal", this.props)
       return (
         <React.Fragment>
           <TriggerButton
@@ -44,6 +45,7 @@ export class Container extends React.Component {
               closeModal={this.closeModal}
               onKeyDown={this.onKeyDown}
               onClickOutside={this.onClickOutside}
+              id={this.props.id}
             />
           ) : null}
         </React.Fragment>

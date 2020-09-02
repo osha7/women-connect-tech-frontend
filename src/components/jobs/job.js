@@ -2,7 +2,7 @@ import React from  'react';
 
 // import EditJobModal from './modal.editJob'
 import { connect } from 'react-redux';
-import EditJobModal from '../../containers/modal_container';
+import EditJobContainer from '../../containers/modal_container';
 
 class Job extends React.Component {
     // console.log(props)
@@ -28,7 +28,7 @@ class Job extends React.Component {
             <div className="job" key={this.props.id} >
             <li key={this.props.id}>{this.props.title}</li>
             {/* <button className="edit-button" onClick={this.showModal}>Edit</button> */}
-            <EditJobModal triggerText={this.triggerText} onSubmit={this.onSubmit}/>
+            <EditJobContainer triggerText={this.triggerText} onSubmit={this.onSubmit} id={this.props.id} />
             <button className="delete-button" onClick={this.handleOnClick}>Delete</button>
             {/* {this.state.modal && <EditJobModal title={props.title} />} */}
             </div>
