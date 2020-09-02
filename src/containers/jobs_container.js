@@ -9,7 +9,8 @@ class JobsContainer extends React.Component {
     // console.log("JobsContainer", this.props)
 
         state = {
-            viewJobForm: false
+            viewJobForm: false,
+            
         }
     
 
@@ -19,21 +20,15 @@ class JobsContainer extends React.Component {
                 viewJobForm: previousState.viewJobForm === true ? false : true
             })
         )
-        // if (this.state.viewJobForm === true) {
-        // // console.log("true")
-        //     return (<div></div>)
-        // } else {
-        //     // console.log("false")
-        //     return <JobForm />
-        // }
     }
 
     render() {
         // console.log(this.state)
+        let text = this.state.viewJobForm === true ? "Collapse Form" : "Post A New Job"
         return (
             <div>
                 <h1>You've Made It To Jobs!</h1>
-                <button onClick={this.handleOnClick}>Post A New Job</button>
+                <button onClick={this.handleOnClick}>{ text }</button>
                 <div className="toggle-job-form">
                     {this.state.viewJobForm === true ? <JobForm /> : null }
                 </div>

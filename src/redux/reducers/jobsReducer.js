@@ -21,6 +21,9 @@ export default function jobsReducer(state = initialState, action) {
             const job = action.payload
             return { ...state, jobs: [job, ...state.jobs] }
 
+        case 'EDIT_JOB':
+            break;
+
         case 'DELETE_JOB':
             // return console.log('made it to delete reducer', state.jobs, action.payload.id)
             const jobs = state.jobs.filter(job => job.id !== action.payload.id)

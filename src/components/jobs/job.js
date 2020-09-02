@@ -1,17 +1,46 @@
 import React from  'react';
 
-export default function Job(props) {
+// import EditJobModal from './modal.editJob'
+import { connect } from 'react-redux';
+import EditJobModal from '../../containers/modal_container';
+
+class Job extends React.Component {
     // console.log(props)
 
-    function handleOnClick() {
+    handleOnClick = () => {
         //  console.log(props.boundDeleteJob)
-        props.boundDeleteJob(props.id)
+        this.props.boundDeleteJob(this.props.id)
     }
 
-    return (
-        <div className="job" key={props.id} >
-        <li key={props.id}>{props.title}</li>
-        <button onClick={handleOnClick}>X</button>
-        </div>
-    )
+    // showModal() {
+    //     //change state {modal: false} to {modal: true}
+    // }
+    // triggerText(){"Edit"}
+    triggerText = "Edit"
+    
+    onSubmit = event => {
+        event.preventDefault()
+    }
+
+    render() {
+        // console.log ("render", this.props)
+        return (
+            <div className="job" key={this.props.id} >
+            <li key={this.props.id}>{this.props.title}</li>
+            {/* <button className="edit-button" onClick={this.showModal}>Edit</button> */}
+            <EditJobModal triggerText={this.triggerText} onSubmit={this.onSubmit}/>
+            <button className="delete-button" onClick={this.handleOnClick}>Delete</button>
+            {/* {this.state.modal && <EditJobModal title={props.title} />} */}
+            </div>
+        )
+    }
 }
+
+const mapStateToProps = (state) => {
+    // console.log (state)
+    return {
+        jobs: state.jobsReducer.jobs
+    }
+}
+
+export default connect(mapStateToProps)(Job);
