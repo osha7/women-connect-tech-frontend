@@ -64,6 +64,7 @@ class App extends React.Component {
   }
 
   render () {
+    console.log(this.state)
     return (
       <div className="App">
         <BrowserRouter>
@@ -93,7 +94,11 @@ class App extends React.Component {
           exact
           path={'/dashboard'}
           render={props => (
-            <Dashboard { ...props } loggedInStatus={this.state.loggedInStatus} />
+            <Dashboard { ...props }
+            loggedInStatus={this.state.loggedInStatus}
+            user={this.state.user}
+            handleLogout={this.handleLogout}
+            />
           )}
           />
 

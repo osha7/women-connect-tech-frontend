@@ -4,22 +4,26 @@ import TriggerButton from './triggerButton';
 
 export class Container extends React.Component {
     state = { isShown: false };
+   
     showModal = () => {
       this.setState({ isShown: true }, () => {
         this.closeButton.focus();
       });
       this.toggleScrollLock();
     };
+    
     closeModal = () => {
       this.setState({ isShown: false });
       this.TriggerButton.focus();
       this.toggleScrollLock();
     };
+    
     onKeyDown = (event) => {
       if (event.keyCode === 27) {
         this.closeModal();
       }
     };
+    
     onClickOutside = (event) => {
       if (this.modal && this.modal.contains(event.target)) return;
       this.closeModal();
@@ -28,6 +32,7 @@ export class Container extends React.Component {
     toggleScrollLock = () => {
       document.querySelector('html').classList.toggle('scroll-lock');
     };
+    
     render() {
         // console.log("modal", this.props)
       return (

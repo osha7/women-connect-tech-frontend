@@ -22,14 +22,16 @@ export default function jobsReducer(state = initialState, action) {
             return { ...state, jobs: [job, ...state.jobs] }
 
         case 'EDIT_JOB':
+
+            return {...state, jobs: state.jobs.map(job => job.id === action.payload.id ? action.payload : job)}
             // return console.log("WE MADE IT INTO THE INVOICE REDUCER, YAY!", state.jobs.filter(job => job.id !== action.payload.id), {...state.jobs.filter(job => job.id !== action.payload.id)}, action.payload)
             // return console.log("WE MADE IT INTO THE INVOICE REDUCER, YAY!", {...state.jobs.filter(job => job.id !== action.payload.id)}, action.payload)
-            const newJobObject = {...state.jobs.filter(job => job.id !== action.payload.id)}
+            //const newJobObject = {...state.jobs.filter(job => job.id !== action.payload.id)}
             
-            const editedJobObject = action.payload
-            const newObject = { editedJobObject, ...newJobObject}
+            //const editedJobObject = action.payload
+            //const newObject = { editedJobObject, ...newJobObject}
             // return console.log(newJobObject, editedJobObject, newObject)
-            return { ...state, jobs: [newObject]}
+            //return { ...state, jobs: [newObject]}
             // return { ...state, jobs: [editedJobObject, ...newJobObject] }
             // return { ...state.jobs, jobs: [...newJobObject, editedJobObject]}
             
