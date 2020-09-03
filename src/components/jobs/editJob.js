@@ -17,6 +17,7 @@ class EditJob extends React.Component {
     // job = this.props.jobs.find(j => j.id === this.props.id)
 
     state = {
+        id: this.props.job.id,
         date: '',
         title: this.props.job.title,
         info: this.props.job.info,
@@ -36,12 +37,12 @@ class EditJob extends React.Component {
     handleOnSubmit = (event) => {
         event.preventDefault()
         // console.log(this.state)
-        console.log(this.state, this.props)
-        // this.props.boundEditJob(this.state)
+        // console.log(this.state, this.props)
+        this.props.boundEditJob(this.state)
     }
 
     render() {
-        console.log(this.props.job)
+        // console.log(this.props.job)
         // let divId = parseInt(document.getElementsByClassName("modal-area")[0].id)
         // console.log(this.props.id, this.props)
 
@@ -96,7 +97,6 @@ const mapStateToProps = (state, props) => {
         jobs: state.jobsReducer.jobs,
         job: state.jobsReducer.jobs.find(j => j.id === props.id)
         // job: this.props.jobs.find(j => j.id === this.props.id)
-        // job: jobs.filter(job => )
         // const jobs = state.jobs.filter(job => job.id !== action.payload.id)
     }
 }
