@@ -10,10 +10,8 @@ class JobsContainer extends React.Component {
 
         state = {
             viewJobForm: false,
-            
         }
     
-
     handleOnClick=()=>{
         // console.log(this.state)
             this.setState(previousState => ({
@@ -27,7 +25,7 @@ class JobsContainer extends React.Component {
         let text = this.state.viewJobForm === true ? "Collapse Form" : "Post A New Job"
         return (
             <div>
-                <h1>You've Made It To Jobs!</h1>
+                <h1>Job Board</h1>
                 <button onClick={this.handleOnClick}>{ text }</button>
                 <div className="toggle-job-form">
                     {this.state.viewJobForm === true ? <JobForm /> : null }

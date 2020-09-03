@@ -1,6 +1,8 @@
 import React from 'react';
 import Avatar from './users/usermedia/AvatarUploads';
 import axios from 'axios';
+// import {UserImage} from './users/usermedia/user_image';
+import UserInfo from './users/user_info'
 
 // functional component
 
@@ -26,7 +28,10 @@ const Dashboard = (props) => {
                 <h3>Status: {props.loggedInStatus}</h3>
                 <button onClick={handleLogoutClick}>Log Out</button>
                 <Avatar />
-                </div>
+                {/* <UserImage user={props.user} /> */}
+                <UserInfo id={props.user.id}/>
+            </div>
+                
         )
     } else {
         return(

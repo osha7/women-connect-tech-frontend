@@ -23,6 +23,14 @@ li {
   padding-left: .6em;
 }
 
+/* ------------------user image avatar---------------- */
+.user-avatar {
+  width: 50%;
+  height: 50%;
+  border-radius: 50%;
+}
+/* ------------------user image avatar---------------- */
+
 /* @import '~js-datepicker/dist/datepicker.min.css'; */
 
 /* -----------------------MODAL------------------- */
