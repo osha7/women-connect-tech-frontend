@@ -17,7 +17,7 @@ class UserInfo extends React.Component {
             return (
                 <div>
                     <br />
-                    <UserImage img={this.props.users.avatar}/>
+                    <UserImage avatar={this.props.users.avatar}/>
                     <h1>{this.props.users.first_name} {this.props.users.last_name}</h1>
                 </div>
             )

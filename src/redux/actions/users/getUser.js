@@ -6,7 +6,8 @@ export function getUser(data) {
         fetch(`http://localhost:3000/users/${data}`)
             .then (resp => resp.json())
             .then (userObj =>{
-                dispatch({ type: GET_USER, payload: userObj.user })
+                // console.log("dispatch fetch", userObj)
+                dispatch({ type: GET_USER, payload: userObj })
             })
     }
 }

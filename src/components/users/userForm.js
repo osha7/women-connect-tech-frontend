@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import editUser from '../../redux/actions/users/editUser'
 
 class UserForm extends React.Component {
-
+    
     state = {
         username: this.props.users.username,
         email: this.props.users.email,
@@ -12,7 +12,7 @@ class UserForm extends React.Component {
         last_name: this.props.users.last_name,
         goals: this.props.users.goals,
         resume_link: this.props.users.resume_link,
-        // avatar: this.props.users.avatar.link,
+        avatar: this.props.users.avatar.link,
         website: this.props.users.website,
         contact: this.props.users.contact,
         linked_in: this.props.users.linked_in,
@@ -42,7 +42,7 @@ class UserForm extends React.Component {
             last_name,
             goals,
             resume_link,
-            // avatar,
+            avatar,
             website,
             contact,
             linked_in,
@@ -69,13 +69,13 @@ class UserForm extends React.Component {
                     <input name="last_name" type="text" value={last_name} onChange={this.handleOnChange} />
                     <br />
                     <label>Goals:</label><br />
-                    <textarea name="goals" value={goals} onChange={this.handleOnChange} />
+                    <textarea name="goals" value={goals || ''} onChange={this.handleOnChange} />
                     <br />
                     <label>Resume Link:</label><br />
                     <input name="resume" type="text" value={resume_link} onChange={this.handleOnChange} />
                     <br />
-                    {/* <label>Image Link:</label><br />
-                    <input name="avatar" type="text" value={avatar.link} onChange={this.handleOnChange} /> */}
+                    <label>Image Link:</label><br />
+                    <input name="avatar" type="text" value={avatar.link} onChange={this.handleOnChange} />
                     <br />
                     <label>Website:</label><br />
                     <input name="website" type="text" value={website} onChange={this.handleOnChange} />
