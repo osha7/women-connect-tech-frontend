@@ -3,6 +3,7 @@ import { getUser } from '../../redux/actions/users/getUser';
 import { connect } from 'react-redux';
 import { UserImage } from './usermedia/user_image';
 
+
 class UserInfo extends React.Component {
 
     componentDidMount = () => {
@@ -10,7 +11,7 @@ class UserInfo extends React.Component {
     }
 
     render() {
-        console.log(this.props)
+        // console.log(this.props)
         // debugger
         if (this.props.users.id === this.props.id) {
             return (

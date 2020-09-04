@@ -22,7 +22,7 @@ class JobsContainer extends React.Component {
 
     render() {
         // console.log(this.state)
-        let text = this.state.viewJobForm === true ? "Collapse Form" : "Post A New Job"
+        let text = this.state.viewJobForm === true ? "Hide Form" : "Post A New Job"
         return (
             <div>
                 <h1>Job Board</h1>

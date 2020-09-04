@@ -1,18 +1,27 @@
 import React from 'react';
-import Avatar from './users/usermedia/AvatarUploads';
+// import Avatar from './users/usermedia/AvatarUploads';
 import axios from 'axios';
-// import {UserImage} from './users/usermedia/user_image';
 import UserInfo from './users/user_info'
+import UserForm from '../components/users/userForm'
 
-// functional component
+class Dashboard extends React.Component {
 
-const Dashboard = (props) => {
+    state = {
+        viewUserForm: false,
+    }
 
-    function handleLogoutClick() {
+    handleOnClick = () => {
+        // console.log(state)
+        this.setState(previousState => ({
+            viewUserForm: previousState.viewUserForm === true ? false : true
+         }))
+    }
+
+    handleLogoutClick() {
         axios.delete('http://localhost:3000/logout', { withCredentials: true })
         .then(response => {
             console.log("logout response", response)
-            props.handleLogout()
+            this.props.handleLogout()
         })
         .catch(error => {
             console.log("logout error", error)
@@ -20,29 +29,36 @@ const Dashboard = (props) => {
         // this.props.handleLogout()
     }
     // debugger
-    console.log(props)
-    if (props.user.id) {
-        return(
-            <div className="Dashboard">
-                <h1>Dashboard</h1>
-                <h3>Status: {props.loggedInStatus}</h3>
-                <button onClick={handleLogoutClick}>Log Out</button>
-                <Avatar />
-                {/* <UserImage user={props.user} /> */}
-                <UserInfo id={props.user.id}/>
-            </div>
-                
-        )
-    } else {
-        return(
-            <div>
-                <h1>Dashboard</h1>
-                <h3>Status: {props.loggedInStatus}</h3>
-                <br /> 
-                <h1>You Must Be Logged In To View Dashboard</h1>
+    // console.log(props)
+    render() {
+        let text = this.state.viewUserForm === true ? "Hide Form" : "Update Your Information"
+        if (this.props.user.id) {
+            return(
+                <div className="Dashboard">
+                    <h1>Dashboard</h1>
+                    <h5>Status: {this.props.loggedInStatus}</h5>
+                    <button onClick={this.handleLogoutClick}>Log Out</button>
+                    
+                    {/* <Avatar /> */}
+                    <UserInfo id={this.props.user.id}/>
+                    <button onClick={this.handleOnClick}>{ text }</button>
+                    <div className="toggle-job-form">
+                        {this.state.viewUserForm === true ? <UserForm /> : null }
+                    </div>
+                </div>
+                    
+            )
+        } else {
+            return(
+                <div>
+                    <h1>Dashboard</h1>
+                    <h3>Status: {this.props.loggedInStatus}</h3>
+                    <br /> 
+                    <h1>You Must Be Logged In To View Dashboard</h1>
 
-            </div>
-        )
+                </div>
+            )
+        }
     }
 }
 
