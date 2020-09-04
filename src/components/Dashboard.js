@@ -44,7 +44,7 @@ class Dashboard extends React.Component {
                     <UserInfo id={this.props.user.id}/>
                     <button onClick={this.handleOnClick}>{ text }</button>
                     <div className="toggle-job-form">
-                        {this.state.viewUserForm === true ? <UserForm /> : null }
+                        {this.state.viewUserForm === true ? <UserForm id={this.props.user.id} /> : null }
                     </div>
                 </div>
                     

@@ -5,6 +5,7 @@ import editUser from '../../redux/actions/users/editUser'
 class UserForm extends React.Component {
     
     state = {
+        id: this.props.users.id,
         username: this.props.users.username,
         email: this.props.users.email,
         // password_digest: this.props.users.password_digest,
@@ -50,8 +51,8 @@ class UserForm extends React.Component {
             open_to_connect,
             open_to_mentor,
             available_to_work
-        } = this.props.users
-        console.log(this.props)
+        } = this.state
+        console.log(this.props, this.state)
         return(
             <div className="user-form">
                 <br />
@@ -63,43 +64,44 @@ class UserForm extends React.Component {
                     <input name="email" type="email" value={email} onChange={this.handleOnChange} required/>
                     <br />
                     <label>First Name:</label><br />
-                    <input name="first_name" type="text" value={first_name} onChange={this.handleOnChange} />
+                    <input name="first_name" type="text" value={first_name || ''} onChange={this.handleOnChange} />
                     <br />
                     <label>Last Name:</label><br />
-                    <input name="last_name" type="text" value={last_name} onChange={this.handleOnChange} />
+                    <input name="last_name" type="text" value={last_name || ''} onChange={this.handleOnChange} />
                     <br />
                     <label>Goals:</label><br />
                     <textarea name="goals" value={goals || ''} onChange={this.handleOnChange} />
                     <br />
                     <label>Resume Link:</label><br />
-                    <input name="resume" type="text" value={resume_link} onChange={this.handleOnChange} />
+                    <input name="resume" type="text" value={resume_link || ''} onChange={this.handleOnChange} />
                     <br />
                     <label>Image Link:</label><br />
-                    <input name="avatar" type="text" value={avatar.link} onChange={this.handleOnChange} />
+                    <input name="avatar" type="text" value={avatar} onChange={this.handleOnChange} />
                     <br />
                     <label>Website:</label><br />
-                    <input name="website" type="text" value={website} onChange={this.handleOnChange} />
+                    <input name="website" type="text" value={website || ''} onChange={this.handleOnChange} />
                     <br />
                     <label>Contact Email:</label><br />
-                    <input name="contact" type="text" value={contact} onChange={this.handleOnChange} />
+                    <input name="contact" type="text" value={contact || ''} onChange={this.handleOnChange} />
                     <br />
                     <label>Linked In:</label><br />
-                    <input name="linked_in" type="text" value={linked_in} onChange={this.handleOnChange} />
+                    <input name="linked_in" type="text" value={linked_in || ''} onChange={this.handleOnChange} />
                     <br />
                     <label>Twitter:</label><br />
-                    <input name="twitter" type="text" value={twitter} onChange={this.handleOnChange} />
+                    <input name="twitter" type="text" value={twitter || ''} onChange={this.handleOnChange} />
                     <br />
                     <label>Open To Connect:</label><br />
-                    <input name="open_to_connect" type="checkbox" value={open_to_connect} onChange={this.handleOnChange} />
+                    <input name="open_to_connect" type="checkbox" value={open_to_connect || ''} onChange={this.handleOnChange} />
                     <br />
                     <label>Open To Mentor:</label><br />
-                    <input name="open_to_mentor" type="checkbox" value={open_to_mentor} onChange={this.handleOnChange} />
+                    <input name="open_to_mentor" type="checkbox" value={open_to_mentor || ''} onChange={this.handleOnChange} />
                     <br />
                     <label>Available To Work:</label><br />
-                    <input name="available_to_work" type="checkbox" value={available_to_work} onChange={this.handleOnChange} />
+                    <input name="available_to_work" type="checkbox" value={available_to_work || ''} onChange={this.handleOnChange} />
                 
                     <br /><br />
                     <input type="submit"/>
+                    <br /><br /><br />
                 </form>
             </div>
         )
