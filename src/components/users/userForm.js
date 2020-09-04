@@ -12,7 +12,7 @@ class UserForm extends React.Component {
         last_name: this.props.users.last_name,
         goals: this.props.users.goals,
         resume_link: this.props.users.resume_link,
-        avatar: this.props.users.avatar.link,
+        // avatar: this.props.users.avatar.link,
         website: this.props.users.website,
         contact: this.props.users.contact,
         linked_in: this.props.users.linked_in,
@@ -42,7 +42,7 @@ class UserForm extends React.Component {
             last_name,
             goals,
             resume_link,
-            avatar,
+            // avatar,
             website,
             contact,
             linked_in,
@@ -57,10 +57,10 @@ class UserForm extends React.Component {
                 <br />
                 <form onSubmit={this.handleOnSubmit}>
                     <label>Username:</label><br />
-                    <input name="username" type="text" value={username} onChange={this.handleOnChange} />
+                    <input name="username" type="text" value={username} onChange={this.handleOnChange} required/>
                     <br />
                     <label>Email:</label><br />
-                    <input name="email" type="email" value={email} onChange={this.handleOnChange} />
+                    <input name="email" type="email" value={email} onChange={this.handleOnChange} required/>
                     <br />
                     <label>First Name:</label><br />
                     <input name="first_name" type="text" value={first_name} onChange={this.handleOnChange} />
@@ -74,8 +74,8 @@ class UserForm extends React.Component {
                     <label>Resume Link:</label><br />
                     <input name="resume" type="text" value={resume_link} onChange={this.handleOnChange} />
                     <br />
-                    <label>Image Link:</label><br />
-                    <input name="avatar" type="text" value={avatar.link} onChange={this.handleOnChange} />
+                    {/* <label>Image Link:</label><br />
+                    <input name="avatar" type="text" value={avatar.link} onChange={this.handleOnChange} /> */}
                     <br />
                     <label>Website:</label><br />
                     <input name="website" type="text" value={website} onChange={this.handleOnChange} />
@@ -90,13 +90,13 @@ class UserForm extends React.Component {
                     <input name="twitter" type="text" value={twitter} onChange={this.handleOnChange} />
                     <br />
                     <label>Open To Connect:</label><br />
-                    <input name="open_to_connect" type="text" value={open_to_connect} onChange={this.handleOnChange} />
+                    <input name="open_to_connect" type="checkbox" value={open_to_connect} onChange={this.handleOnChange} />
                     <br />
                     <label>Open To Mentor:</label><br />
-                    <input name="open_to_mentor" type="text" value={open_to_mentor} onChange={this.handleOnChange} />
+                    <input name="open_to_mentor" type="checkbox" value={open_to_mentor} onChange={this.handleOnChange} />
                     <br />
                     <label>Available To Work:</label><br />
-                    <input name="available_to_work" type="text" value={available_to_work} onChange={this.handleOnChange} />
+                    <input name="available_to_work" type="checkbox" value={available_to_work} onChange={this.handleOnChange} />
                 
                     <br /><br />
                     <input type="submit"/>
