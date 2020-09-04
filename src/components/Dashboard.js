@@ -17,7 +17,7 @@ class Dashboard extends React.Component {
          }))
     }
 
-    handleLogoutClick() {
+    handleLogoutClick = () => {
         axios.delete('http://localhost:3000/logout', { withCredentials: true })
         .then(response => {
             console.log("logout response", response)
@@ -25,6 +25,7 @@ class Dashboard extends React.Component {
         })
         .catch(error => {
             console.log("logout error", error)
+
         })
         // this.props.handleLogout()
     }

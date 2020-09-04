@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import editUser from '../../redux/actions/users/editUser'
 
 class UserForm extends React.Component {
 
@@ -11,7 +12,7 @@ class UserForm extends React.Component {
         last_name: this.props.users.last_name,
         goals: this.props.users.goals,
         resume_link: this.props.users.resume_link,
-        avatar: this.props.users.avatar,
+        avatar: this.props.users.avatar.link,
         website: this.props.users.website,
         contact: this.props.users.contact,
         linked_in: this.props.users.linked_in,
@@ -30,6 +31,7 @@ class UserForm extends React.Component {
 
     handleOnSubmit = (e) => {
         e.preventDefault()
+        this.props.boundEditUser(this.state)
     }
 
     render() {
@@ -55,46 +57,46 @@ class UserForm extends React.Component {
                 <br />
                 <form onSubmit={this.handleOnSubmit}>
                     <label>Username:</label><br />
-                    <input name="username" type="text" value={username}  onChange={this.handleOnChange} />
+                    <input name="username" type="text" value={username} onChange={this.handleOnChange} />
                     <br />
                     <label>Email:</label><br />
-                    <input name="email" type="email" value={email}  onChange={this.handleOnChange} />
+                    <input name="email" type="email" value={email} onChange={this.handleOnChange} />
                     <br />
                     <label>First Name:</label><br />
-                    <input name="first_name" type="text" value={first_name}  onChange={this.handleOnChange} />
+                    <input name="first_name" type="text" value={first_name} onChange={this.handleOnChange} />
                     <br />
                     <label>Last Name:</label><br />
-                    <input name="last_name" type="text" value={last_name}  onChange={this.handleOnChange} />
+                    <input name="last_name" type="text" value={last_name} onChange={this.handleOnChange} />
                     <br />
                     <label>Goals:</label><br />
-                    <textarea name="goals" value={goals}  onChange={this.handleOnChange} />
+                    <textarea name="goals" value={goals} onChange={this.handleOnChange} />
                     <br />
                     <label>Resume Link:</label><br />
-                    <input name="resume" type="text" value={resume_link}  onChange={this.handleOnChange} />
+                    <input name="resume" type="text" value={resume_link} onChange={this.handleOnChange} />
                     <br />
                     <label>Image Link:</label><br />
-                    <input name="avatar" type="text" value={avatar}  onChange={this.handleOnChange} />
+                    <input name="avatar" type="text" value={avatar.link} onChange={this.handleOnChange} />
                     <br />
                     <label>Website:</label><br />
-                    <input name="website" type="text" value={website}  onChange={this.handleOnChange} />
+                    <input name="website" type="text" value={website} onChange={this.handleOnChange} />
                     <br />
                     <label>Contact Email:</label><br />
-                    <input name="contact" type="text" value={contact}  onChange={this.handleOnChange} />
+                    <input name="contact" type="text" value={contact} onChange={this.handleOnChange} />
                     <br />
                     <label>Linked In:</label><br />
-                    <input name="linked_in" type="text" value={linked_in}  onChange={this.handleOnChange} />
+                    <input name="linked_in" type="text" value={linked_in} onChange={this.handleOnChange} />
                     <br />
                     <label>Twitter:</label><br />
-                    <input name="twitter" type="text" value={twitter}  onChange={this.handleOnChange} />
+                    <input name="twitter" type="text" value={twitter} onChange={this.handleOnChange} />
                     <br />
                     <label>Open To Connect:</label><br />
-                    <input name="open_to_connect" type="text" value={open_to_connect}  onChange={this.handleOnChange} />
+                    <input name="open_to_connect" type="text" value={open_to_connect} onChange={this.handleOnChange} />
                     <br />
                     <label>Open To Mentor:</label><br />
-                    <input name="open_to_mentor" type="text" value={open_to_mentor}  onChange={this.handleOnChange} />
+                    <input name="open_to_mentor" type="text" value={open_to_mentor} onChange={this.handleOnChange} />
                     <br />
                     <label>Available To Work:</label><br />
-                    <input name="available_to_work" type="text" value={available_to_work}  onChange={this.handleOnChange} />
+                    <input name="available_to_work" type="text" value={available_to_work} onChange={this.handleOnChange} />
                 
                     <br /><br />
                     <input type="submit"/>
@@ -111,8 +113,9 @@ const mSTP = (state) => {
     }
 }
 
-const mDTP = (dispatch) => {
-
-}
+const mDTP = dispatch => ({
+    boundEditUser: (id) => dispatch(editUser(id))
+})
 
 export default connect(mSTP, mDTP)(UserForm);
+
