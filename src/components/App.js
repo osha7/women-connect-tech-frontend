@@ -7,7 +7,7 @@ import axios from 'axios';
 import Home from './Home';
 import Dashboard from './users/Dashboard';
 import NavBar from './navbar'
-import Connect from './connect/connect'
+import WomenConnect from '../containers/wct_container'
 import EventsBoard from './events/eventsboard'
 import JobsContainer from '../containers/jobs_container';
 
@@ -71,7 +71,7 @@ class App extends React.Component {
         <div className="navbar">
           <NavBar /> 
            {/*if you need to pass props with Route, use render={callback function}, otherwise use component=  */}
-          <Route exact path="/connect" component={Connect} />
+          <Route exact path="/connect" component={WomenConnect} />
           <Route exact path="/events" component={EventsBoard} />  
           <Route exact path="/jobs" component={JobsContainer} />
         </div>

@@ -26,6 +26,7 @@ class JobsForm extends React.Component {
         event.preventDefault()
         // console.log(this.state)
         this.props.addJob(this.state)
+        this.props.viewAddJobForm()
         this.setState({
             date: '',
             title: '',
