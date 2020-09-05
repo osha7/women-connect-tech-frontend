@@ -1,13 +1,22 @@
 import React from 'react';
+import '../css/wct.css';
+import WTConnect from '../components/wtconnect/wtconnect';
+import { connect } from 'react-redux';
 
-class Connect extends React.Component {
+class WomenConnect extends React.Component {
     render() {
+        // console.log('wtc container', this.props)
         return (
         <div>
-            <h1>You've Made It To Connect!</h1>
+            <div className="wct-header">
+                <h1>Women Connect in TECH!</h1>
+            </div>
+            <div className="wct-container">
+                <WTConnect />
+            </div>
         </div>
         )
     }
 }
 
-export default Connect
+export default connect()(WomenConnect)

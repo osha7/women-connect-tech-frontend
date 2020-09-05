@@ -12,6 +12,7 @@ class JobsBoard extends React.Component {
     }
 
     render() {
+        // console.log("jobsboard", this.props)
     //    console.log(this.props.jobs)
         let c = this.props.jobs.map(job => <Job 
             key={job.id} 
@@ -38,7 +39,7 @@ class JobsBoard extends React.Component {
 }
 
 const mapStateToProps = (state) => {
-    // console.log("test", state)
+    console.log("test jobs", state)
     return {
         jobs: state.jobsReducer.jobs
     }

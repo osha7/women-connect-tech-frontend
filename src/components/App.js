@@ -5,7 +5,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import axios from 'axios';
 
 import Home from './Home';
-import Dashboard from './users/Dashboard';
+import Dashboard from './user/Dashboard';
 import NavBar from './navbar'
 import WomenConnect from '../containers/wct_container'
 import EventsBoard from './events/eventsboard'

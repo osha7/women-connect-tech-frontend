@@ -11,7 +11,7 @@ const link = {
 }
 const NavBar = () => {
   return (
-    <div className="navbar">
+    <div className="navbar-top">
         
       <NavLink
         to="/"
