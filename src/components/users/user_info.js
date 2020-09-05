@@ -31,7 +31,7 @@ class UserInfo extends React.Component {
                 <table className="users-availability-table" key={this.props.users.id}>
                     <tbody>
                         <th>Available To Work</th><th>Open To Connect</th><th>Open To Mentor</th>
-                        <tr><td>{this.props.users.available_to_work}</td><td>{this.props.users.open_to_connect}</td><td>{this.props.users.open_to_mentor}</td></tr>
+                        <tr><td>{this.props.users.available_to_work ? "👍" : "🚫"}</td><td>{this.props.users.open_to_connect ? "👍" : "🚫"}</td><td>{this.props.users.open_to_mentor ? "👍" : "🚫"}</td></tr>
                     </tbody>
                 </table>
                 <br /><br />
@@ -62,3 +62,5 @@ const mapDispatchToProps = (dispatch) => {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(UserInfo);
+
+

@@ -35,6 +35,12 @@ class UserForm extends React.Component {
         this.props.boundEditUser(this.state)
     }
 
+    handleCheck = (e) => {
+        this.setState({
+            checked: !this.state.checked
+        })
+    }
+
     render() {
         const {
             username,
@@ -91,7 +97,13 @@ class UserForm extends React.Component {
                     <input name="twitter" type="text" value={twitter || ''} onChange={this.handleOnChange} />
                     <br />
                     <label>Open To Connect:</label><br />
-                    <input name="open_to_connect" type="checkbox" value={open_to_connect || ''} onChange={this.handleOnChange} />
+                    <input
+                    name="open_to_connect" 
+                    type="checkbox" 
+                    value={open_to_connect || ''} 
+                    onChange={this.handleCheck}
+                    // defaultChecked={this.state.checked} 
+                    />
                     <br />
                     <label>Open To Mentor:</label><br />
                     <input name="open_to_mentor" type="checkbox" value={open_to_mentor || ''} onChange={this.handleOnChange} />
