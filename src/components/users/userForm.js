@@ -36,9 +36,16 @@ class UserForm extends React.Component {
     }
 
     handleCheck = (e) => {
+        // console.log("handleChecked")
+        // e.preventDefault()
         this.setState({
-            checked: !this.state.checked
+            [e.target.name]: !e.target.value
         })
+        // this.setState( previousState => {
+        //     // console.log("handleChecked", !previousState.open_to_mentor)
+        //     console.log("handleChecked", [e.target.name])
+        //     // return (!previousState, console.log("afterChecked", previousState))
+        // })
     }
 
     render() {
@@ -103,13 +110,28 @@ class UserForm extends React.Component {
                     value={open_to_connect || ''} 
                     onChange={this.handleCheck}
                     // defaultChecked={this.state.checked} 
+                    checked={open_to_connect}
                     />
                     <br />
                     <label>Open To Mentor:</label><br />
-                    <input name="open_to_mentor" type="checkbox" value={open_to_mentor || ''} onChange={this.handleOnChange} />
+                    <input 
+                    name="open_to_mentor"
+                    type="checkbox"
+                    value={open_to_mentor || ''}
+                    // onChange={this.handleOnChange} 
+                    onChange={this.handleCheck}
+                    checked={open_to_mentor}
+                    />
                     <br />
                     <label>Available To Work:</label><br />
-                    <input name="available_to_work" type="checkbox" value={available_to_work || ''} onChange={this.handleOnChange} />
+                    <input 
+                    name="available_to_work"
+                    type="checkbox" 
+                    value={available_to_work || ''}
+                    // onChange={this.handleOnChange}
+                    onChange={this.handleCheck}
+                    checked={available_to_work}
+                    />
                 
                     <br /><br />
                     <input type="submit"/>
