@@ -10,7 +10,7 @@ class Dashboard extends React.Component {
         viewUserForm: false,
     }
 
-    handleOnClick = () => {
+    clickForUserForm = () => {
         // console.log(state)
         this.setState(previousState => ({
             viewUserForm: previousState.viewUserForm === true ? false : true
@@ -42,9 +42,9 @@ class Dashboard extends React.Component {
                     
                     {/* <Avatar /> */}
                     <UserInfo id={this.props.user.id}/>
-                    <button onClick={this.handleOnClick}>{ text }</button>
-                    <div className="toggle-job-form">
-                        {this.state.viewUserForm === true ? <UserForm id={this.props.user.id} /> : null }
+                    <button onClick={this.clickForUserForm}>{ text }</button>
+                    <div className="toggle-user-form">
+                        {this.state.viewUserForm === true ? <UserForm id={this.props.user.id} viewform={this.clickForUserForm}/> : null }
                     </div>
                     <br /><br /><br />
                 </div>

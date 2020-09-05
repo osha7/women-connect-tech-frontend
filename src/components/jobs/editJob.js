@@ -39,6 +39,7 @@ class EditJob extends React.Component {
         // console.log(this.state)
         // console.log(this.state, this.props)
         this.props.boundEditJob(this.state)
+        this.props.closeModal()
     }
 
     render() {

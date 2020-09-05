@@ -33,6 +33,8 @@ class UserForm extends React.Component {
     handleOnSubmit = (e) => {
         e.preventDefault()
         this.props.boundEditUser(this.state)
+        console.log("handleOnSubmit", this.props)
+        this.props.viewform()
     }
 
     handleCheck = (e) => {
@@ -41,6 +43,7 @@ class UserForm extends React.Component {
         this.setState({
             [e.target.name]: !e.target.value
         })
+        
         // this.setState( previousState => {
         //     // console.log("handleChecked", !previousState.open_to_mentor)
         //     console.log("handleChecked", [e.target.name])
@@ -65,7 +68,7 @@ class UserForm extends React.Component {
             open_to_mentor,
             available_to_work
         } = this.state
-        console.log(this.props, this.state)
+        // console.log(this.props, this.state)
         return(
             <div className="user-form">
                 <br />
@@ -103,6 +106,15 @@ class UserForm extends React.Component {
                     <label>Twitter:</label><br />
                     <input name="twitter" type="text" value={twitter || ''} onChange={this.handleOnChange} />
                     <br />
+                    <label>Available To Work:</label><br />
+                    <input 
+                    name="available_to_work"
+                    type="checkbox" 
+                    value={available_to_work || ''}
+                    onChange={this.handleCheck}
+                    checked={available_to_work}
+                    />
+                    <br />
                     <label>Open To Connect:</label><br />
                     <input
                     name="open_to_connect" 
@@ -118,20 +130,9 @@ class UserForm extends React.Component {
                     name="open_to_mentor"
                     type="checkbox"
                     value={open_to_mentor || ''}
-                    // onChange={this.handleOnChange} 
                     onChange={this.handleCheck}
                     checked={open_to_mentor}
-                    />
-                    <br />
-                    <label>Available To Work:</label><br />
-                    <input 
-                    name="available_to_work"
-                    type="checkbox" 
-                    value={available_to_work || ''}
-                    // onChange={this.handleOnChange}
-                    onChange={this.handleCheck}
-                    checked={available_to_work}
-                    />
+                    />  
                 
                     <br /><br />
                     <input type="submit"/>
