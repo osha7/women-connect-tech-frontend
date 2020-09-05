@@ -89,7 +89,7 @@ class UserForm extends React.Component {
                     <textarea name="goals" value={goals || ''} onChange={this.handleOnChange} />
                     <br />
                     <label>Resume Link:</label><br />
-                    <input name="resume" type="text" value={resume_link || ''} onChange={this.handleOnChange} />
+                    <input name="resume_link" type="text" value={resume_link || ''} onChange={this.handleOnChange} />
                     <br />
                     <label>Image Link:</label><br />
                     <input name="avatar" type="text" value={avatar} onChange={this.handleOnChange} />
