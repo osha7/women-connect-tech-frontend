@@ -21,8 +21,8 @@ const editUser = (data) => {
         })
         .then(resp => resp.json())
         .then(userObj => {
-            console.log(userObj)
-            // dispatch({type: EDIT_USER, payload: userObj})
+            // console.log(userObj)
+            dispatch({type: EDIT_USER, payload: userObj})
         })
     }
 }

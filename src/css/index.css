@@ -31,6 +31,32 @@ li {
 }
 /* ------------------user image avatar---------------- */
 
+/* ------------------user table---------------- */
+.users-availability-table {
+  text-align: center;
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  border: 3px solid #ddd;
+  width: 100%;
+}
+
+.users-availability-table td, .users-availability-table th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.users-availability-table tr:nth-child(even){background-color: #f2f2f2;}
+
+.users-availability-table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: #ADBDC9;
+  /* background-color: #55728E; */
+  color: white;
+}
+/* ------------------end user table---------------- */
+
 /* @import '~js-datepicker/dist/datepicker.min.css'; */
 
 /* -----------------------MODAL------------------- */

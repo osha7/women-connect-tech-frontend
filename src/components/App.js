@@ -1,15 +1,15 @@
 import React from 'react';
-import './css/App.css';
+import '../css/App.css';
 import { connect } from 'react-redux'
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import axios from 'axios';
 
-import Home from './components/Home';
-import Dashboard from './components/Dashboard';
-import NavBar from './components/navbar'
-import Connect from './components/connect/connect'
-import EventsBoard from './components/events/eventsboard'
-import JobsContainer from './containers/jobs_container';
+import Home from './Home';
+import Dashboard from './users/Dashboard';
+import NavBar from './navbar'
+import Connect from './connect/connect'
+import EventsBoard from './events/eventsboard'
+import JobsContainer from '../containers/jobs_container';
 
 
 

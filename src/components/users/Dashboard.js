@@ -1,8 +1,8 @@
 import React from 'react';
 // import Avatar from './users/usermedia/AvatarUploads';
 import axios from 'axios';
-import UserInfo from './users/user_info'
-import UserForm from '../components/users/userForm'
+import UserInfo from './user_info'
+import UserForm from './userForm'
 
 class Dashboard extends React.Component {
 
@@ -46,6 +46,7 @@ class Dashboard extends React.Component {
                     <div className="toggle-job-form">
                         {this.state.viewUserForm === true ? <UserForm id={this.props.user.id} /> : null }
                     </div>
+                    <br /><br /><br />
                 </div>
                     
             )
