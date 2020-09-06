@@ -1,22 +1,33 @@
 .wct-container {
-    display: flex;
+    display: grid;
     align-items: center;
     justify-content: center;
-  }
-  .wct-sub-container {
-    width: 100%;
-    justify-content: center;
-  }
-  
-
-  .wct-container {
     flex-direction: row;
     flex-wrap: wrap;
     width: 650px;
     height: 650px;
   }
+
+  .wct-sub-container {
+    /* width: 100%; */
+    justify-content: center;
+  }
+
+  .wtconnect {
+    display: flex;
+   /* justify-content: space-between; */
+    /* width: 100%; */
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 500px;
+    height: 650px;
+  }
+
+  
   
   .womens-card {
+    /* display: grid; */
     width: 200px;
     height: 350px;
     margin: 20px;
