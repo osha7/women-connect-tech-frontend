@@ -14,15 +14,15 @@ body {
   background: #2D142C;
   /* width: 200%; */
   height: 100px;
-  justify-content: center;
+  /* justify-content: center; */
   display: flex;
   align-items: center;
 }
 
-.wtconnect {
+/* .wtconnect {
   background: black;
   color: white;
-}
+} */
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
@@ -42,6 +42,14 @@ li {
   width: 50%;
   height: 50%;
   border-radius: 50%;
+}
+
+.users-avatar {
+  margin: 10px;
+  width: 85%;
+  height: 50%;
+  border-radius: 50%;
+  border-block-color: black;
 }
 /* ------------------user image avatar---------------- */
 

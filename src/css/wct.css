@@ -3,20 +3,28 @@
     align-items: center;
     justify-content: center;
   }
+  .wct-sub-container {
+    width: 100%;
+    justify-content: center;
+  }
   
+
   .wct-container {
     flex-direction: row;
     flex-wrap: wrap;
     width: 650px;
     height: 650px;
   }
-/*   
+  
   .womens-card {
     width: 200px;
-    height: 200px;
-    margin: 5px;
+    height: 350px;
+    margin: 20px;
     transition: transform 1s;
     transform-style: preserve-3d;
+    padding: 4px;
+    background: #c8c8c8;
+    
   }
   
   .womens-card:hover {
@@ -29,27 +37,27 @@
   
   
   
-  .card-front, .card-back {
+  /* .card-front, .card-back {
     position: absolute;
     height: inherit;
     width: inherit;
     backface-visibility: hidden;
     background-size: cover;
-  }
+  } */
   
-  .card-front {
+  /* .connect-user {
     filter: grayscale(100%);
     transition-duration: 1s;
     box-shadow: 5px 5px 10px;
     box-shadow: 5px 5px 10px rgb(55, 55, 55, 0.85);
     
-  }
+  } */
   
-  .card-front:hover {
+  /* .card-front:hover {
     filter: grayscale(0%);
-  }
+  } */
   
-  .card-back {
+  /* .card-back {
     background-image: url("./assets/patterns/cork-wallet.png");
     transform: rotateY(180deg);
     box-shadow: 5px 5px 10px rgb(55, 55, 55, 0.85);
@@ -58,16 +66,16 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-  }
-  
+  } */
+/*   
   span {
     border: none;
     width: 80%;
     height: 0px;
     border: 1px solid black;
     color: #000000;
-  }
-  
+  } */
+/*   
   .zero {
     background: url("./assets/stars/stars.png") 0 0;
     width: 148px;

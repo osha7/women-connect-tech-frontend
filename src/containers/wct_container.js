@@ -7,11 +7,13 @@ class WomenConnect extends React.Component {
     render() {
         // console.log('wtc container', this.props)
         return (
-        <div>
-            <div className="wct-header">
-                <h1>Women Connect in TECH!</h1>
+        <div className="wct-container" >
+            {/* <div className="wct-header">
+                
             </div>
-            <div className="wct-container">
+            <br /> */}
+            <div className="wct-sub-container">
+            <h1>Women Connect in TECH!</h1>
                 <WTConnect />
             </div>
         </div>
