@@ -37,28 +37,24 @@
   
   
   
-  /* .card-front, .card-back {
+  .card-front, .card-back {
     position: absolute;
     height: inherit;
     width: inherit;
     backface-visibility: hidden;
     background-size: cover;
-  } */
+  }
   
-  /* .connect-user {
-    filter: grayscale(100%);
+  .womens-card {
+    /* filter: grayscale(100%); */
     transition-duration: 1s;
     box-shadow: 5px 5px 10px;
     box-shadow: 5px 5px 10px rgb(55, 55, 55, 0.85);
     
-  } */
+  }
   
-  /* .card-front:hover {
-    filter: grayscale(0%);
-  } */
-  
-  /* .card-back {
-    background-image: url("./assets/patterns/cork-wallet.png");
+  .card-back {
+    
     transform: rotateY(180deg);
     box-shadow: 5px 5px 10px rgb(55, 55, 55, 0.85);
     text-align: center;
@@ -66,7 +62,7 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-  } */
+  } 
 /*   
   span {
     border: none;
