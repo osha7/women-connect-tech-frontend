@@ -7,12 +7,14 @@
     width: 650px;
     height: 650px;
     margin-bottom: 7px;
+    
   }
 
   .wct-sub-container {
     /* width: 100%; */
     justify-content: center;
     margin-left: 20%;
+    
     
   }
 
@@ -25,6 +27,7 @@
     flex-wrap: wrap;
     width: 500px;
     height: 650px;
+    text-align: center;
     
     /* margin-left: 10%; */
     /* display: grid;
@@ -40,7 +43,7 @@ grid-auto-rows: auto; */
   .womens-card {
     /* display: grid; */
     position: relative;
-    width: 175px;
+    width: 172px;
     height: 300px;
     margin: 20px;
     transition: transform 1s;
@@ -48,7 +51,8 @@ grid-auto-rows: auto; */
     padding: 4px;
     background-color: transparent;
     perspective: 1000px;
-    
+    /* margin-left: 10px; */
+    /* cursor: pointer; */
   }
   
   .womens-card:hover {
@@ -85,20 +89,24 @@ grid-auto-rows: auto; */
     transition-duration: 1s;
     box-shadow: 5px 5px 10px;
     box-shadow: 5px 5px 10px rgb(55, 55, 55, 0.85);
+    font-size: 11px;
     
   }
   
   .card-back {
     
     transform: rotateY(180deg);
-    /* box-shadow: 5px 5px 10px rgb(55, 55, 55, 0.85); */
+    box-shadow: 5px 5px 10px rgb(55, 55, 55, 0.85);
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    align-items: center;
+    /* align-items: center; */
   } 
-  
+  .card-back .back-details {
+    align-items: center;
+  }
+
   span {
     border: none;
     width: 80%;
@@ -113,3 +121,57 @@ grid-auto-rows: auto; */
     height: 33px;
   }
    */
+
+
+   /* ------------------CARD BACK user table---------------- */
+   .card-back {
+    margin-bottom: 0;
+    line-height: 1.5;
+    font-size: 14px;
+  }
+
+.card-back .users-availability-table {
+  margin-bottom: 0;
+}
+
+.card-back .users-availability-table .t-body {
+  font-size: 10px;
+  position: relative;
+  max-width: 50px;
+  height: 25px;
+  margin-left: -10%;
+  margin-top: 100px;
+}
+
+.card-back .users-availability-table {
+  text-align: center;
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  border: 3px solid #ddd;
+  width: 10%;
+}
+
+.card-back .users-availability-table td, .users-availability-table th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.card-back .users-availability-table tr:nth-child(even){background-color: #f2f2f2;}
+
+.card-back .users-availability-table th {
+  /* padding-top: 12px; */
+  /* padding-bottom: 12px; */
+  text-align: center;
+  background-color: #ADBDC9;
+  /* background-color: #55728E; */
+  color: white;
+}
+
+/* .card-back br {
+ 
+} */
+
+.card-back p {
+  font-size: 11px;
+}
+/* ------------------end user table---------------- */

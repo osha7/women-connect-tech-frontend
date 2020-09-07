@@ -16,7 +16,7 @@ class UserInfo extends React.Component {
         if (this.props.users.id === this.props.id) {
             return (
                 <>
-                <div>
+                <div className="user-info">
                     <br />
                     <UserImage avatar={this.props.users.avatar}/>
                     <h1>{this.props.users.first_name} {this.props.users.last_name}</h1>

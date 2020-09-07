@@ -5,7 +5,7 @@ const link = {
   width: '100px',
   padding: '12px',
   margin: '0 6px 6px',
-  background: '#801336',
+  background: '#101357',
   textDecoration: 'none',
   color: 'white',
 }
@@ -18,7 +18,7 @@ const NavBar = () => {
         exact 
         style={link}
         activeStyle={{
-          background: "#EE4540"
+          background: "#fbaf08"
         }}
       >Home</NavLink>
 
@@ -27,7 +27,7 @@ const NavBar = () => {
         exact 
         style={link}
         activeStyle={{
-          background: "#EE4540"
+          background: "#fbaf08"
         }}
       >Dashboard</NavLink>
 
@@ -36,7 +36,7 @@ const NavBar = () => {
         exact
         style={link}
         activeStyle={{
-          background: "#EE4540"
+          background: "#fbaf08"
         }}
       >Women Connect In Tech</NavLink>
 
@@ -45,7 +45,7 @@ const NavBar = () => {
             exact
             style={link}
             activeStyle={{
-            background: "#EE4540"
+            background: "#fbaf08"
             }}
         >Events</NavLink>
 
@@ -54,7 +54,7 @@ const NavBar = () => {
             exact
             style={link}
             activeStyle={{
-            background: "#EE4540"
+            background: "#fbaf08"
             }}
         >Jobs</NavLink>
 

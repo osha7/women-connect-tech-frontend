@@ -10,9 +10,9 @@ export default function User(props) {
             <br />
             < >{props.first_name}{props.last_name}</> */}
             <div className="flip-card-inner">
-                <CardFront avatar={props.avatar} first_name={props.first_name} last_name={props.last_name} />
+                <CardFront avatar={props.avatar} first_name={props.first_name} last_name={props.last_name} goals={props.goals}/>
                 <CardBack 
-                goals={props.goals}
+                // goals={props.goals}
                 resume_link={props.resume_link}
                 website={props.website}
                 contact={props.contact}

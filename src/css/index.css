@@ -1,5 +1,5 @@
 body {
-  background-color: #c8c8c8;
+  background-color: whitesmoke;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -9,13 +9,15 @@ body {
   /* background: rgb(45,20,44);
   background: linear-gradient(0deg, rgba(45,20,44,1) 0%, rgba(238,64,64,1) 100%);
   color: white; */
+  font-family: 'Cormorant Garamond', serif;
+  color: #101357;
 }
 
 .navbar-top {
-  background: #2D142C;
+  background: #101357;
   width: 100%;
   height: 100px;
-  /* justify-content: center; */
+  justify-content: center;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -47,10 +49,13 @@ li {
 }
 
 .users-avatar {
-  margin: 10px;
-  width: 85%;
-  height: 50%;
-  border-radius: 50%;
+  border-top: 10px;
+  border-color: black;
+  /* margin-top: 20px; */
+  width: 100%;
+  height: 60%;
+  margin-left: 0;
+  /* border-radius: 50%; */
   border-block-color: black;
 }
 /* ------------------user image avatar---------------- */
@@ -80,6 +85,7 @@ li {
   color: white;
 }
 /* ------------------end user table---------------- */
+
 
 /* @import '~js-datepicker/dist/datepicker.min.css'; */
 
