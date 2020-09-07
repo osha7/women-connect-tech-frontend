@@ -39,7 +39,7 @@ class JobsBoard extends React.Component {
 }
 
 const mapStateToProps = (state) => {
-    console.log("test jobs", state)
+    // console.log("test jobs", state)
     return {
         jobs: state.jobsReducer.jobs
     }
