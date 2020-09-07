@@ -13,7 +13,8 @@
   .wct-sub-container {
     /* width: 100%; */
     justify-content: center;
-    margin-left: 20%;
+    margin-left: 120%;
+  
     
     
   }
@@ -137,7 +138,7 @@ grid-auto-rows: auto; */
 .card-back .users-availability-table .t-body {
   font-size: 10px;
   position: relative;
-  max-width: 50px;
+  max-width: 51px;
   height: 25px;
   margin-left: -10%;
   margin-top: 100px;
@@ -162,7 +163,7 @@ grid-auto-rows: auto; */
   /* padding-top: 12px; */
   /* padding-bottom: 12px; */
   text-align: center;
-  background-color: #ADBDC9;
+  background-color: #fbaf08;
   /* background-color: #55728E; */
   color: white;
 }

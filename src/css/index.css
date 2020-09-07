@@ -21,6 +21,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  border-bottom: 7px solid #fea49f;
 }
 
 /* .wtconnect {
@@ -43,8 +44,8 @@ li {
 
 /* ------------------user image avatar---------------- */
 .user-avatar {
-  width: 50%;
-  height: 50%;
+  width: 30%;
+  height: 30%;
   border-radius: 50%;
 }
 
@@ -80,7 +81,7 @@ li {
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: center;
-  background-color: #ADBDC9;
+  background-color: #fbaf08;
   /* background-color: #55728E; */
   color: white;
 }

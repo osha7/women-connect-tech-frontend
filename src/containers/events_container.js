@@ -24,6 +24,8 @@ class EventsContainer extends React.Component {
                 <div className="toggle-event-form">
                     {this.state.viewEventForm === true ? <EventForm viewAddEventForm={this.viewAddEventForm}/> : null }
                 </div>
+                <br /><br />
+                <EventsBoard />
             </div>
         )
     }

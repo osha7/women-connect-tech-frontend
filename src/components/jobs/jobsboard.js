@@ -28,7 +28,7 @@ class JobsBoard extends React.Component {
 
             boundDeleteJob={this.props.boundDeleteJob} 
             boundEditJob={this.props.boundEditJob} 
-            />)
+        />)
         return (
             <div className="available-jobs">
                 <h3>Available Jobs:</h3>
