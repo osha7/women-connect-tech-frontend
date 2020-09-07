@@ -13,11 +13,12 @@ body {
 
 .navbar-top {
   background: #2D142C;
-  width: 150%;
+  width: 100%;
   height: 100px;
   /* justify-content: center; */
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 /* .wtconnect {

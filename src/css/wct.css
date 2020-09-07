@@ -1,16 +1,19 @@
 .wct-container {
-    display: grid;
-    align-items: center;
+    display: flex;
+    /* align-items: center; */
     justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
     width: 650px;
     height: 650px;
+    margin-bottom: 7px;
   }
 
   .wct-sub-container {
     /* width: 100%; */
     justify-content: center;
+    margin-left: 20%;
+    
   }
 
   .wtconnect {
@@ -22,19 +25,29 @@
     flex-wrap: wrap;
     width: 500px;
     height: 650px;
+    
+    /* margin-left: 10%; */
+    /* display: grid;
+ 
+grid-template-columns: repeat(3, 1fr);
+ 
+grid-auto-rows: auto; */
+ 
   }
 
   
   
   .womens-card {
     /* display: grid; */
-    width: 200px;
-    height: 350px;
+    position: relative;
+    width: 175px;
+    height: 300px;
     margin: 20px;
     transition: transform 1s;
     transform-style: preserve-3d;
     padding: 4px;
-    background: #c8c8c8;
+    background-color: transparent;
+    perspective: 1000px;
     
   }
   
@@ -45,8 +58,19 @@
   .womens-card:active {
     transform: rotateY(180deg) scale(1.05);
   }
-  
-  
+
+  .flip-card-inner {
+    position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  }
+
+  .womens-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
   
   .card-front, .card-back {
     position: absolute;
@@ -56,7 +80,7 @@
     background-size: cover;
   }
   
-  .womens-card {
+  .card-front {
     /* filter: grayscale(100%); */
     transition-duration: 1s;
     box-shadow: 5px 5px 10px;
@@ -67,21 +91,21 @@
   .card-back {
     
     transform: rotateY(180deg);
-    box-shadow: 5px 5px 10px rgb(55, 55, 55, 0.85);
+    /* box-shadow: 5px 5px 10px rgb(55, 55, 55, 0.85); */
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
   } 
-/*   
+  
   span {
     border: none;
     width: 80%;
     height: 0px;
     border: 1px solid black;
     color: #000000;
-  } */
+  }
 /*   
   .zero {
     background: url("./assets/stars/stars.png") 0 0;
