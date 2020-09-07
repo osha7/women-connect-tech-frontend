@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import getEvents from '../../redux/actions/events/getEvents';
 import deleteEvent from '../../redux/actions/events/deleteEvent';
 
+
 class EventsBoard extends React.Component {
 
     componentDidMount = () => {

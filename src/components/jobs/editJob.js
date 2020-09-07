@@ -95,7 +95,6 @@ class EditJob extends React.Component {
 const mapStateToProps = (state, props) => {
 //    console.log (state, props)
     return {
-        jobs: state.jobsReducer.jobs,
         job: state.jobsReducer.jobs.find(j => j.id === props.id)
         // job: this.props.jobs.find(j => j.id === this.props.id)
         // const jobs = state.jobs.filter(job => job.id !== action.payload.id)
@@ -103,7 +102,7 @@ const mapStateToProps = (state, props) => {
 }
 
 const mapStateToDispatch = dispatch => ({
-    boundEditJob: (id) => dispatch(editJob(id)),
+    boundEditJob: id => dispatch(editJob(id))
 })
 
 export default connect(mapStateToProps, mapStateToDispatch)(EditJob)
