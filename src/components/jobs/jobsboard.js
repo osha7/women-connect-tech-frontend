@@ -14,7 +14,7 @@ class JobsBoard extends React.Component {
     render() {
         // console.log("jobsboard", this.props)
     //    console.log(this.props.jobs)
-        let c = this.props.jobs.map(job => <Job 
+        let j = this.props.jobs.map(job => <Job 
             key={job.id} 
             id={job.id} 
             date={job.date}
@@ -32,7 +32,7 @@ class JobsBoard extends React.Component {
         return (
             <div className="available-jobs">
                 <h3>Available Jobs:</h3>
-                <ul>{ c }</ul>
+                <ul>{ j }</ul>
             </div>
         )
     }

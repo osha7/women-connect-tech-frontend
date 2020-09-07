@@ -1,13 +1,20 @@
 import React from 'react';
+import Event from './event';
+import { connect } from 'react-redux';
+import getEvents from '../../redux/actions/events/getEvents';
 
 class EventsBoard extends React.Component {
+
+    componentDidMount = () => {
+
+    }
+
     render() {
         return (
-        <div>
-            <h1>You've Made It To Events!</h1>
+        <div className="all-events">
         </div>
         )
     }
 }
 
-export default EventsBoard
+export default connect()(EventsBoard);

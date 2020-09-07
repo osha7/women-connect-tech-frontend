@@ -12,12 +12,11 @@ class JobsContainer extends React.Component {
             viewJobForm: false,
         }
     
-    viewAddJobForm=()=>{
+    viewAddJobForm = () => {
         // console.log(this.state)
-            this.setState(previousState => ({
-                viewJobForm: previousState.viewJobForm === true ? false : true
-            })
-        )
+        this.setState(previousState => ({
+            viewJobForm: previousState.viewJobForm === true ? false : true
+        }))
     }
 
     render() {

@@ -5,7 +5,7 @@
 const GET_JOBS = "GET_JOBS"
 
 //action creators ==== the objects, themselves are actions
-export function getJobs(jobArray) {
+export function getJobs() {
     // return { type: GET_JOBS, payload: jobArray } 
     return function(dispatch) {
         fetch("http://localhost:3000/jobs")
