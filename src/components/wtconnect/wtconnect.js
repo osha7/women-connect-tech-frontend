@@ -31,7 +31,7 @@ class WTConnect extends React.Component {
     }
 
     render() {
-        console.log("wtcRender", this.props.users.length)
+        // console.log("wtcRender", this.props.users.length)
         if (this.props.users.length > 0) {
             return (
                 <div className="wtconnect">
