@@ -31,7 +31,7 @@ class Job extends React.Component {
     // phone: "9174779485"
    
     render() {
-       console.log ("render", this.props)
+    //    console.log ("render", this.props)
         return (
             <div className="job" key={this.props.id} >
                 <li key={this.props.id}>{this.props.title} ----- <i>Posted On:</i>   {moment.parseZone(this.props.created_at).format('MM/DD/YY')} - ({moment(this.props.created_at).startOf('day').fromNow()});</li>

@@ -9,7 +9,7 @@ export default function CardBack(props) {
                 <p>{props.goals}</p> */}
                 <br /> 
                 <b>Contact Email:</b>
-                <p>{props.contact}</p>
+                <p><i class="fa fa-envelope-open" aria-hidden="true"></i> {props.contact}</p>
                 <a href={props.website}>Website</a><br />
                 <a href={props.resume_link}>Resume</a><br /><br />
                 <b>Get Social:</b><br /><a href={props.linked_in}>LinkedIn</a> --- <a href={props.twitter}>Twitter</a>

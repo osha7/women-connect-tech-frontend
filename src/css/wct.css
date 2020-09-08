@@ -4,8 +4,8 @@
     justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
-    width: 650px;
-    height: 650px;
+    width: auto;
+    height: auto;
     margin-bottom: 7px;
     
   }
@@ -13,7 +13,8 @@
   .wct-sub-container {
     /* width: 100%; */
     justify-content: center;
-    margin-left: 120%;
+    /* margin-left: 120%; */
+  
   
     
     
@@ -26,8 +27,8 @@
     justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
-    width: 500px;
-    height: 650px;
+    width: auto;
+    height: auto;
     text-align: center;
     
     /* margin-left: 10%; */

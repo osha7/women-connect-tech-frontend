@@ -14,13 +14,13 @@ const NavBar = () => {
     <div className="navbar-top">
         
       <NavLink
-        to="/"
+        to="/login"
         exact 
         style={link}
         activeStyle={{
           background: "#fbaf08"
         }}
-      >Home</NavLink>
+      >LogIn</NavLink>
 
       <NavLink
         to="/dashboard"
@@ -32,7 +32,7 @@ const NavBar = () => {
       >Dashboard</NavLink>
 
       <NavLink
-        to="/connect"
+        to="/"
         exact
         style={link}
         activeStyle={{

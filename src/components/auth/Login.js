@@ -24,7 +24,7 @@ class Login extends Component {
 
     onSubmitHandler = (event) => {
         event.preventDefault()
-        console.log(origin)
+        // console.log(origin)
         // axios.post takes in 3 arguments: 1. endpoint to hit, 2. data we want to send in the post request (passed in as object), 3. another object: 'withCredentials: true'
         axios.post("http://localhost:3000/sessions", {
             user: {
@@ -37,14 +37,18 @@ class Login extends Component {
         )
         // axios returns a promise
         .then(response => {
-            // console.log("resp from login", response)
+            console.log("resp from login", response)
             if (response.data.logged_in === true){
                 this.props.handleSuccessfulAuth(response.data)
+            } else {
+                // console.log("Didn't log in")
+                alert ("Error in credentials.  Please Try Again")
             }
         })
-        .catch(error => {
-            console.log("login error", error)
-        })
+        // .catch(error => {
+        //     console.log("login error", error)
+        // })
+        .catch(() => alert("Unable To Login At This Time"))
     }
 
     render() {

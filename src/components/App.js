@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import axios from 'axios';
 
-import Home from './Home';
+import LogIn from './LogInPage';
 import Dashboard from './user/Dashboard';
 import NavBar from './navbar'
 import WomenConnect from '../containers/wct_container'
@@ -71,17 +71,17 @@ class App extends React.Component {
         <div className="navbar">
           <NavBar /> 
            {/*if you need to pass props with Route, use render={callback function}, otherwise use component=  */}
-          <Route exact path="/connect" component={WomenConnect} />
-          <Route exact path="/events" component={EventsContainer} />  
-          <Route exact path="/jobs" component={JobsContainer} />
+          <Route exact path="/" component={WomenConnect} />
+          <Route exact path="/events" render={props => ( <EventsContainer { ...props } user={this.state.user} />  )} />
+          <Route exact path="/jobs" render={props => ( <JobsContainer { ...props } user={this.state.user} />  )} />
         </div>
         <Switch>
           {/* <Route exact path={'/'} component={Home} /> */}
           <Route 
           exact
-          path={'/'} 
+          path={'/login'} 
           render={props => (
-            <Home { ...props }
+            <LogIn { ...props }
             handleLogin={this.handleLogin}
             loggedInStatus={this.state.loggedInStatus} 
             handleLogout={this.handleLogout}

@@ -12,7 +12,6 @@ class Registration extends Component {
             email: '',
             password: '',
             password_confirmation: '',
-            // avatar: '',
             registrationErrors: ''
 
         }
@@ -26,7 +25,7 @@ class Registration extends Component {
 
     onSubmitHandler = (event) => {
         event.preventDefault()
-        console.log(origin)
+        // console.log(origin)
         // axios.post takes in 3 arguments: 1. endpoint to hit, 2. data we want to send in the post request (passed in as object), 3. another object: 'withCredentials: true'
         axios.post("http://localhost:3000/users", {
             user: {
@@ -41,14 +40,19 @@ class Registration extends Component {
         )
         // axios returns a promise
         .then(response => {
-            // console.log("resp from registration", response)
-            if (response.data.status === "created"){
+            //  console.log("resp from registration", response)
+            // if (response.data.status === "created"){
+            if (response.data.user.id){
                 this.props.handleSuccessfulAuth(response.data)
+            } else {
+                // console.log("nope", this.state)
+                alert ("Username & Password must be unique.  Please Try Again")
             }
         })
-        .catch(error => {
-            console.log("registration error", error)
-        })
+        // .catch(error => {
+        //     console.log("registration error", error)
+        // })
+        .catch(() => alert("Unable To Register At This Time"))
     }
 
     render() {

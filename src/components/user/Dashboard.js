@@ -30,8 +30,9 @@ class Dashboard extends React.Component {
         // this.props.handleLogout()
     }
     // debugger
-    // console.log(props)
+   
     render() {
+        // console.log(this.props)
         let text = this.state.viewUserForm === true ? "Hide Form" : "Update Your Information"
         if (this.props.user.id) {
             return(

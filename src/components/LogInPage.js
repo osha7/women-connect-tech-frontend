@@ -30,7 +30,7 @@ class Home extends React.Component {
     render () {
         return(
             <div className="Home">
-                <h1>HOME PAGE</h1>
+                
                 <h3>Status: {this.props.loggedInStatus} </h3>
                 <Registration handleSuccessfulAuth={this.handleSuccessfulAuth} />
                 <br />
