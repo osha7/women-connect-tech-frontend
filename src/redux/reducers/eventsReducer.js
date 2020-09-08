@@ -7,37 +7,12 @@ export default function eventsReducer(state = initialState, action) {
     switch(action.type) {
         case 'GET_EVENTS':
             // console.log(action.payload)
-            const ap = (action.payload.sort(function(a, b) {
-                const dateA = a.date
-                const dateB = b.date
-                if (dateA < dateB) {
-                    return -1
-                }
-                if (dateA > dateB) {
-                    return 1
-                }
-                return 0
-            }))
-            // return {events: action.payload}
-            return {events: ap}
-            
+            return {events: action.payload}       
 
         case 'ADD_EVENT':
             // {console.log({...state}, state)}
             const event = action.payload
-            // debugger
-            // const aps = (state.events.sort(function(a, b) {
-            //     const dateA = a.date
-            //     const dateB = b.date
-            //     if (dateA < dateB) {
-            //         return -1
-            //     }
-            //     if (dateA > dateB) {
-            //         return 1
-            //     }
-            //     return 0
-            // }))
-            // const sortedArrayWithEvent = aps.push(event)
+            
             // debugger
             return { ...state, events: [event, ...state.events] }
             // return { ...state, events: aps.push(event)}

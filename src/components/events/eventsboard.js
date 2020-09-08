@@ -12,7 +12,18 @@ class EventsBoard extends React.Component {
     }
 
     render() {
-        let e = this.props.events.map(event => <Event 
+        const aps = (this.props.events.sort(function(a, b) {
+                const dateA = a.date
+                const dateB = b.date
+                if (dateA < dateB) {
+                    return -1
+                }
+                if (dateA > dateB) {
+                    return 1
+                }
+                return 0
+            }))
+        let e = aps.map(event => <Event 
             key={event.id}
             id={event.id}
             title={event.title}
