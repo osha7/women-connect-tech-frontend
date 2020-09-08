@@ -20,6 +20,7 @@ class JobsContainer extends React.Component {
     }
 
     render() {
+        // console.log(this.props)
         // console.log(this.state)
         let text = this.state.viewJobForm === true ? "Hide Form" : "Post A New Job"
         return (
@@ -27,10 +28,10 @@ class JobsContainer extends React.Component {
                 <h1>Job Board</h1>
                 <button onClick={this.viewAddJobForm}>{ text }</button>
                 <div className="toggle-job-form">
-                    {this.state.viewJobForm === true ? <JobForm viewAddJobForm={this.viewAddJobForm}/> : null }
+                    {this.state.viewJobForm === true ? <JobForm user={this.props.user} viewAddJobForm={this.viewAddJobForm}/> : null }
                 </div>
                 <br /> <br />
-                <JobsBoard />
+                <JobsBoard user={this.props.user} />
             </div>
         )
     }

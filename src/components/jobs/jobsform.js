@@ -13,7 +13,8 @@ class JobsForm extends React.Component {
         salary_highest_range: '',
         contact_person: '',
         email: '', 
-        phone: ''
+        phone: '',
+        user_id: this.props.user.id
     }
     
     handleOnChange = event => {
@@ -35,11 +36,13 @@ class JobsForm extends React.Component {
             salary_highest_range: '',
             contact_person: '',
             email: '', 
-            phone: ''
+            phone: '',
+            user_id: ''
         })
     }
 
     render() {
+        console.log(this.props)
         return(
             <div>
                 <h3>Add A New Job Posting:</h3>

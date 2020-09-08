@@ -21,7 +21,7 @@ class UserInfo extends React.Component {
                     <UserImage avatar={this.props.users.avatar}/>
                     <h1>{this.props.users.first_name} {this.props.users.last_name}</h1>
                     <h5>Goals:</h5> <p>{this.props.users.goals}</p>
-                    <h5>Contact Email:</h5> <p>{this.props.users.contact}</p>
+                    <h5>Contact Email:</h5> <p><i class="fa fa-envelope-open" aria-hidden="true"></i> {this.props.users.contact}</p>
                     <h5>Website:</h5> <a href={this.props.users.website}>{this.props.users.website}</a>
                     <h5>Resume Link:</h5> <a href={this.props.users.resume_link}>Resume</a>
                     <h5>Get Social:</h5><a href={this.props.users.linked_in}>LinkedIn</a> --- <a href={this.props.users.twitter}>Twitter</a>

@@ -15,6 +15,7 @@ class JobsBoard extends React.Component {
         // console.log("jobsboard", this.props)
     //    console.log(this.props.jobs)
         let j = this.props.jobs.map(job => <Job 
+            user={this.props.user}
             key={job.id} 
             id={job.id} 
             date={job.date}
@@ -25,7 +26,7 @@ class JobsBoard extends React.Component {
             contact_person={job.contact_person}
             email={job.email}
             phone={job.phone}
-
+            user_id={job.user_id}
             boundDeleteJob={this.props.boundDeleteJob} 
             boundEditJob={this.props.boundEditJob} 
         />)
