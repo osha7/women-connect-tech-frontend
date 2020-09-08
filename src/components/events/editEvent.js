@@ -1,13 +1,14 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { editEvent } from '../../redux/actions/events/editEvent';
+import moment from 'moment';
 
 class EditEvent extends React.Component {
 
     state = {
         id: this.props.event.id,
         title: this.props.event.title,
-        date: '',
+        date: `${moment(this.props.event.date).format('YYYY')}-${moment(this.props.event.date).format('MM')}-${moment(this.props.event.date).format('DD')}`,
         time: '',
         link: this.props.event.link,
         info: this.props.event.info,

@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import editJob from '../../redux/actions/jobs/editJob';
 import salaryOptions from './salaryOptions'
+import moment from 'moment';
 
 class EditJob extends React.Component {
 
@@ -18,7 +19,7 @@ class EditJob extends React.Component {
 
     state = {
         id: this.props.job.id,
-        date: '',
+        date: `${moment(this.props.job.date).format('YYYY')}-${moment(this.props.job.date).format('MM')}-${moment(this.props.job.date).format('DD')}`,
         title: this.props.job.title,
         info: this.props.job.info,
         salary_starting_range: this.props.job.salary_starting_range,
@@ -43,7 +44,7 @@ class EditJob extends React.Component {
     }
 
     render() {
-        // console.log(this.props.job)
+        console.log(this.props.job)
         // let divId = parseInt(document.getElementsByClassName("modal-area")[0].id)
         // console.log(this.props.id, this.props)
 

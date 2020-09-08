@@ -44,8 +44,8 @@ li {
 
 /* ------------------user image avatar---------------- */
 .user-avatar {
-  width: 30%;
-  height: 30%;
+  width: 20%;
+  height: 20%;
   border-radius: 50%;
 }
 
@@ -62,6 +62,7 @@ li {
 /* ------------------user image avatar---------------- */
 
 /* ------------------user table---------------- */
+
 .users-availability-table {
   text-align: center;
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
