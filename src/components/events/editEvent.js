@@ -9,7 +9,7 @@ class EditEvent extends React.Component {
         id: this.props.event.id,
         title: this.props.event.title,
         date: `${moment(this.props.event.date).format('YYYY')}-${moment(this.props.event.date).format('MM')}-${moment(this.props.event.date).format('DD')}`,
-        time: '',
+        time: `${moment.parseZone(this.props.event.time).format('hh')}:${moment(this.props.event.time).format('mm')}`,
         link: this.props.event.link,
         info: this.props.event.info,
         contact_person: this.props.event.contact_person,

@@ -21,11 +21,16 @@ class Event extends React.Component {
     render() {
         return (
             <div className="event" key={this.props.id}>
-                <li key={this.props.id}>{this.props.title}
+                <p className="underline-p" ><b>{this.props.title} </b></p>
+                <i>Date:</i>   {moment(this.props.date).format('dddd, MMMM Do YYYY')}<br />
+                <i>Time:</i>   {moment.parseZone(this.props.time).format('LT')}<br />
                 <br />
-                {moment(this.props.date).format('dddd, MMMM Do YYYY')}
-                </li>
-
+                <i>MoreInfo:</i>   {this.props.info}<br />
+                <br />
+                <i>Link:</i>   <a href={this.props.link}>{this.props.link}</a><br />
+                <i>Contact Person:</i>   {this.props.contact_person}<br />
+                <i>Contact Email:</i>   {this.props.email}<br />
+                <br />
                 <EditEventContainer triggerText={this.triggerText} onSubmit={this.onSubmit} id={this.props.id} />
                 <button className="delete-button" onClick={this.handleOnClick}>Delete</button>
             </div>
