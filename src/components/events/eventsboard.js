@@ -12,6 +12,7 @@ class EventsBoard extends React.Component {
     }
 
     render() {
+        // console.log(this.props)
         const aps = (this.props.events.sort(function(a, b) {
                 const dateA = a.date
                 const dateB = b.date
@@ -24,6 +25,7 @@ class EventsBoard extends React.Component {
                 return 0
             }))
         let e = aps.map(event => <Event 
+            user={this.props.user}
             key={event.id}
             id={event.id}
             title={event.title}
@@ -33,6 +35,7 @@ class EventsBoard extends React.Component {
             info={event.info}
             contact_person={event.contact_person}
             email={event.email}
+            user_id={event.user_id}
 
             boundDeleteEvent={this.props.boundDeleteEvent} 
         />)

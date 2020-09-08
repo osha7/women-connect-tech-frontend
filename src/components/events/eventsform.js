@@ -12,6 +12,7 @@ class EventsForm extends React.Component {
         info: '',
         contact_person: '',
         email: '',   
+        user_id: this.props.user.id
     }
 
     handleOnChange = event => {
@@ -31,7 +32,8 @@ class EventsForm extends React.Component {
             link: '',
             info: '',
             contact_person: '',
-            email: '',   
+            email: '',
+            user_id: ''
         })
     }
 

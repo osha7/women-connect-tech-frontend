@@ -1,7 +1,7 @@
 const ADD_JOB = "ADD_JOB"
 
 export const addJob = (data) => {
-    console.log(data)
+    // console.log(data)
     return ((dispatch) => {
         fetch('http://localhost:3000/jobs', {
             headers: {

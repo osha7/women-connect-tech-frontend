@@ -42,7 +42,7 @@ class JobsForm extends React.Component {
     }
 
     render() {
-        console.log(this.props)
+        // console.log(this.props)
         return(
             <div>
                 <h3>Add A New Job Posting:</h3>
@@ -83,10 +83,6 @@ class JobsForm extends React.Component {
             </div>
         )
     } 
-
-//  function mSTP(state) {
-//      return (jobs: state.jobs)
-//  }
 
 }
 

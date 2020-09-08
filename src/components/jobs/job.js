@@ -13,29 +13,19 @@ class Job extends React.Component {
         this.props.boundDeleteJob(this.props.id)
     }
 
-    // showModal() {
-    //     //change state {modal: false} to {modal: true}
-    // }
-    // triggerText(){"Edit"}
     triggerText = "Edit"
     
     onSubmit = event => {
         event.preventDefault()
     }
-    // contact_person: "Osha"
-    // created_at: "2020-09-08T03:58:02.965Z"
-    // date: null
-    // email: "ogroetz@gmail.com"
-    // id: 103
-    // info: "fadfadfafa"
-    // phone: "9174779485"
    
     render() {
     // console.log ("render", this.props)
         if (this.props.user.id === this.props.user_id) {
             return (
                 <div className="job" key={this.props.id} >
-                    <li key={this.props.id}>{this.props.title} ----- <i>Posted On:</i>   {moment.parseZone(this.props.created_at).format('MM/DD/YY')} - ({moment(this.props.created_at).startOf('day').fromNow()});</li>
+                    <li key={this.props.id}>{this.props.title} ----- <i>Posted On:</i>   {moment.parseZone(this.props.created_at).format('MM/DD/YY')}</li>
+                    {/*  - ({moment(this.props.created_at).startOf('day').fromNow()}) */}
                     <br />
                     <i>Salary Range:</i>   ${this.props.salary_starting_range} - ${this.props.salary_highest_range} 
                     <br />
