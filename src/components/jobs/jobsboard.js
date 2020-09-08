@@ -20,8 +20,8 @@ class JobsBoard extends React.Component {
             date={job.date}
             title={job.title} 
             info={job.info}
-            starting_salary_range={job.starting_salary_range}
-            salarary_highest_range={job.salarary_highest_range}
+            salary_starting_range={job.salary_starting_range}
+            salary_highest_range={job.salary_highest_range}
             contact_person={job.contact_person}
             email={job.email}
             phone={job.phone}

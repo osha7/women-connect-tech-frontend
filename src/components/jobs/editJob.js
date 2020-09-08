@@ -56,9 +56,9 @@ class EditJob extends React.Component {
             <div>
                 <h1>Edit Job Post</h1>
                 <form onSubmit={this.handleOnSubmit} >
-                    <label>Date:</label><br />
+                    {/* <label>Date:</label><br />
                     <input name="date" type="date" value={this.state.date} onChange={this.handleOnChange}  required/>
-                    <br />
+                    <br /> */}
                     <label>Title:</label><br />
                     <input name="title" type="text" value={this.state.title} onChange={this.handleOnChange} required />
                     <br />

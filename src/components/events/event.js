@@ -22,7 +22,7 @@ class Event extends React.Component {
         return (
             <div className="event" key={this.props.id}>
                 <p className="underline-p" ><b>{this.props.title} </b></p>
-                <i>Date:</i>   {moment(this.props.date).format('dddd, MMMM Do YYYY')}<br />
+                <i>Date:</i>   {moment.parseZone(this.props.date).format('dddd, MMMM Do YYYY')}<br />
                 <i>Time:</i>   {moment.parseZone(this.props.time).format('LT')}<br />
                 <br />
                 <i>MoreInfo:</i>   {this.props.info}<br />
