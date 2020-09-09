@@ -19,13 +19,15 @@ class EventsContainer extends React.Component {
         // console.log(this.props)
         let text = this.state.viewEventForm === true ? "Hide Form" : "Post A New Event"
         return(
-            <div>
+            <div className="events-container">
                 <h1>Events Board</h1>
-                <button onClick={this.viewAddEventForm}>{ text }</button>
+                <div className="add-event-button">
+                    <button onClick={this.viewAddEventForm}>{ text }</button>
+                </div>
                 <div className="toggle-event-form">
                     {this.state.viewEventForm === true ? <EventForm user={this.props.user} viewAddEventForm={this.viewAddEventForm}/> : null }
                 </div>
-                <br /><br />
+                <br />
                 <EventsBoard user={this.props.user} />
             </div>
         )

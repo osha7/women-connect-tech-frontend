@@ -11,6 +11,17 @@ body {
   color: white; */
   font-family: 'Cormorant Garamond', serif;
   color: #101357;
+
+  /* background-image: url(../moods\ &\ color\ palettes-01\ copy.jpg)  !important;
+    background-position: center center  !important;
+    background-repeat: no-repeat  !important;
+    background-attachment: fixed  !important;
+    background-size: cover  !important; */
+    
+}
+.navbar {
+  background: #101357;
+  height: 150px;
 }
 
 .navbar-top {
@@ -30,7 +41,7 @@ body {
 }
 
 input {
-  width: 75%;
+  width: 500px;
   border-style: 2px;
   padding: 8px;
   border-radius: 4px;
@@ -40,6 +51,16 @@ input {
 }
 
 button {
+  background-color: #101357;
+  border-radius: 3px;
+  border-width: 2px;
+  color: whitesmoke;
+  border-color: #fea49f;
+  cursor: pointer;
+  /* border-style: 2pX; */
+}
+
+.submit {
   background-color: #101357;
   border-radius: 3px;
   border-width: 2px;
@@ -148,7 +169,7 @@ li {
     top: 50%;
     height: auto;
     transform: translate(-50%, -50%);
-    max-width: 30em;
+    max-width: 40em;
     max-height: calc(100% - 1em);
   }
 }

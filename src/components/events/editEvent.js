@@ -55,7 +55,7 @@ class EditEvent extends React.Component {
                     <label>Email:</label><br />
                     <input name="email" type="email" value={this.state.email} onChange={this.handleOnChange} />
                     <br /><br />
-                    <input type="submit"/>
+                    <input className="submit" type="submit"/>
                 </form>
             </div>
         )

@@ -33,25 +33,152 @@
   border-style: solid;
   border-width: 5px;
   border-radius: 10px;
-  background-color: lightgray;
+  background-color: #EDDFD2; 
   padding: 3px;
   margin: 4px;
-  width: 95%;
+  /* width: 95%; */
+  width: 650px;
+  color: #101357;
+  
+}
+/* @keyframes Border {
+  0% {color: #101357;}
+  20% {color: #fea49f;}
+  40% {color: #fbaf08;}
+  60% {color: #00a0a0;}
+  80% {color: #007f4f;}
+}
+.event {
+  border: 5px solid;
+  border-radius: 10px;
+  animation: Border 15s infinite alternate;
+  color: #101357;
+} */
+
+.events-container {
+  /* background: url(../../public/womens_conference.jpg) no-repeat center center fixed !important; */
+    background-image: url(../moods\ &\ color\ palettes-01\ copy.jpg)  !important;
+    background-position: center center  !important;
+    background-repeat: no-repeat  !important;
+    background-attachment: fixed  !important;
+    background-size: cover  !important;
+    margin-bottom: 20px;
+
+  width: auto;
+  height: auto;
+  /* justify-content: center;
+  align-items: center; */
+  text-align: center; 
+}
+
+.events-container .add-event-button {
+  height: 75px;
+  align-items: center;
+  text-align: center;
+  /* background-color: #EDDFD2; */
+}
+
+.events-container .add-event-button button {
+  background-color: #EDDFD2;
+  padding: 20px;
+  border-radius: 5px;
+  border-width: 2px;
+  color: #101357;
+  border-color: #101357;
+  cursor: pointer;
+  font-size: 15px;
+  text-align: center;
+
+}
+.events-container h1 {
+  color: #EDDFD2;
+  font-size: 58px;
+  background-color: #101357;
+  width: 650px;
+  margin-left: 27%;
+
+}
+
+
+.all-events ul {
+  width: auto;
+  height: auto;
+  margin-left: 23%;
+  /* margin: 50%; */
+  text-align: center; 
+  margin-bottom: 20px;
+  padding-bottom: 100px;
+}
+
+.jobs-container {
+  background-image: url(../2nd\ moods\ &\ color\ palettes-01.jpg)  !important;
+    background-position: center center  !important;
+    background-repeat: no-repeat  !important;
+    background-attachment: fixed  !important;
+    background-size: cover  !important;
+    margin-bottom: 20px;
+  /* background-image: url("https://res.cloudinary.com/djsz02nwd/image/upload/v1599615012/womens_conference_pvydli.jpg"); */
+  width: auto;
+  height: auto;
+  /* justify-content: center;
+  align-items: center; */
+  text-align: center; 
+}
+
+.jobs-container .add-job-button {
+  height: 75px;
+  align-items: center;
+  text-align: center;
+  /* background-color: #EDDFD2; */
+}
+
+.jobs-container .add-job-button button {
+  background-color: #EDDFD2;
+  padding: 20px;
+  border-radius: 5px;
+  border-width: 2px;
+  color: #101357;
+  border-color: #101357;
+  cursor: pointer;
+  font-size: 15px;
+  text-align: center;
+
+}
+
+.jobs-container h1 {
+  color: #EDDFD2;
+  font-size: 58px;
+  background-color: #101357;
+  width: 650px;
+  margin-left: 27%;
+
+}
+
+.available-jobs ul {
+  width: auto;
+  height: auto;
+  margin-left: 23%;
+  /* margin: 50%; */
+  text-align: center; 
+  padding-bottom: 100px;
 }
 
 .job {
+  
   list-style-type: none;
-  margin-left: 60px;
+  /* margin-left: 60px; */
   border-style: solid;
   border-width: 5px;
   border-radius: 10px;
   /* border-color: black; */
-  background-color: lightgray;
+  background-color: #EDDFD2;
   padding: 3px;
   margin: 2px;
-  width: 95%;
+  width: 650px;
   /* cursor: pointer; */
 } 
+
+
 
 .underline-p {
   text-decoration: underline;

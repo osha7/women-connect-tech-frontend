@@ -24,7 +24,7 @@ class Job extends React.Component {
         if (this.props.user.id === this.props.user_id) {
             return (
                 <div className="job" key={this.props.id} >
-                    <li key={this.props.id}>{this.props.title} ----- <i>Posted On:</i>   {moment.parseZone(this.props.created_at).format('MM/DD/YY')}</li>
+                    <li key={this.props.id}>{this.props.title.toUpperCase()} ----- <i>Posted On:</i>   {moment.parseZone(this.props.created_at).format('MM/DD/YY')}</li>
                     {/*  - ({moment(this.props.created_at).startOf('day').fromNow()}) */}
                     <br />
                     <i>Salary Range:</i>   ${this.props.salary_starting_range} - ${this.props.salary_highest_range} 
@@ -40,7 +40,7 @@ class Job extends React.Component {
         } else {
             return (
                 <div className="job" key={this.props.id} >
-                    <li key={this.props.id}>{this.props.title} ----- <i>Posted On:</i>   {moment.parseZone(this.props.created_at).format('MM/DD/YY')} - ({moment(this.props.created_at).startOf('day').fromNow()});</li>
+                    <li key={this.props.id}>{this.props.title.toUpperCase()} ----- <i>Posted On:</i>   {moment.parseZone(this.props.created_at).format('MM/DD/YY')}</li>
                     <br />
                     <i>Salary Range:</i>   ${this.props.salary_starting_range} - ${this.props.salary_highest_range} 
                     <br />

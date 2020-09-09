@@ -24,13 +24,15 @@ class JobsContainer extends React.Component {
         // console.log(this.state)
         let text = this.state.viewJobForm === true ? "Hide Form" : "Post A New Job"
         return (
-            <div>
+            <div className="jobs-container">
                 <h1>Job Board</h1>
-                <button onClick={this.viewAddJobForm}>{ text }</button>
+                <div className="add-job-button">
+                    <button onClick={this.viewAddJobForm}>{ text }</button>
+                </div>
                 <div className="toggle-job-form">
                     {this.state.viewJobForm === true ? <JobForm user={this.props.user} viewAddJobForm={this.viewAddJobForm}/> : null }
                 </div>
-                <br /> <br />
+                <br />
                 <JobsBoard user={this.props.user} />
             </div>
         )

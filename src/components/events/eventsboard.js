@@ -43,7 +43,6 @@ class EventsBoard extends React.Component {
         // console.log("eventsBoard", this.props)
         return (
         <div className="all-events">
-            <h3><b>Events In Technology:</b></h3>
             <ul>{ e }</ul>
         </div>
         )

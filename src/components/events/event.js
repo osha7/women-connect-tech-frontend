@@ -22,7 +22,7 @@ class Event extends React.Component {
         if (this.props.user.id === this.props.user_id) {
             return (
                 <div className="event" key={this.props.id}>
-                    <p className="underline-p" ><b>{this.props.title} </b></p>
+                    <p className="underline-p" ><b>{this.props.title.toUpperCase()} </b></p>
                     <i>Date:</i>   {moment.parseZone(this.props.date).format('dddd, MMMM Do YYYY')}<br />
                     <i>Time:</i>   {moment.parseZone(this.props.time).format('LT')}<br />
                     <br />
@@ -40,7 +40,7 @@ class Event extends React.Component {
         } else {
             return (
                 <div className="event" key={this.props.id}>
-                    <p className="underline-p" ><b>{this.props.title} </b></p>
+                    <p className="underline-p" ><b>{this.props.title.toUpperCase()} </b></p>
                     <i>Date:</i>   {moment.parseZone(this.props.date).format('dddd, MMMM Do YYYY')}<br />
                     <i>Time:</i>   {moment.parseZone(this.props.time).format('LT')}<br />
                     <br />

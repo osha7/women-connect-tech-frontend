@@ -86,7 +86,7 @@ class EditJob extends React.Component {
                     <label>Phone:</label><br />
                     <input name="phone" type="text" value={this.state.phone} onChange={this.handleOnChange} />
                     <br /><br />
-                    <input type="submit"/>
+                    <input className="submit" type="submit"/>
                 </form>
             </div>
         )

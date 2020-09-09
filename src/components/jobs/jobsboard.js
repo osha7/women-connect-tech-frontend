@@ -32,7 +32,6 @@ class JobsBoard extends React.Component {
         />)
         return (
             <div className="available-jobs">
-                <h3>Available Jobs:</h3>
                 <ul>{ j }</ul>
             </div>
         )
