@@ -10,6 +10,9 @@ import thunk from 'redux-thunk'
 
 import rootReducer from './redux/reducers/combineReducers';
 
+// const BASE_URL = process.env.NODE_ENV === 'production' ? "https://chatapp-back-end.herokuapp.com" : "http://localhost:3000"
+// export const BASE_URL
+
 const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 const store = createStore(

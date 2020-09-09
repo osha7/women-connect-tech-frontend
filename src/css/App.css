@@ -14,7 +14,7 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-image: url(../dashboard-01.jpg)  !important;
+  background-image: url(../images/dashboard-01.jpg)  !important;
     background-position: center center  !important;
     background-repeat: no-repeat  !important;
     background-attachment: fixed  !important;
@@ -91,7 +91,7 @@
 
 .events-container {
   /* background: url(../../public/womens_conference.jpg) no-repeat center center fixed !important; */
-    background-image: url(../moods\ &\ color\ palettes-01\ copy.jpg)  !important;
+    background-image: url(../images/moods\ &\ color\ palettes-01\ copy.jpg)  !important;
     background-position: center center  !important;
     background-repeat: no-repeat  !important;
     background-attachment: fixed  !important;
@@ -165,7 +165,7 @@
 
 /* -------------------------JOBS----------------------------- */
 .jobs-container {
-  background-image: url(../2nd\ moods\ &\ color\ palettes-01.jpg)  !important;
+  background-image: url(../images/2nd\ moods\ &\ color\ palettes.jpg)  !important;
     background-position: center center  !important;
     background-repeat: no-repeat  !important;
     background-attachment: fixed  !important;
