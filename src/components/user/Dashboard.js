@@ -41,6 +41,7 @@ class Dashboard extends React.Component {
                     <h1>Dashboard</h1>
                     <h5>Status: {this.props.loggedInStatus}</h5>
                     <button onClick={this.handleLogoutClick}>Log Out</button>
+                    <br /><br />
                     
                     {/* <Avatar /> */}
                     <UserInfo id={this.props.user.id}/>

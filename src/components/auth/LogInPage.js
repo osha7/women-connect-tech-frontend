@@ -30,16 +30,20 @@ class Home extends React.Component {
     render () {
         // console.log("login page", this.props)
         return(
-            <div className="Home">
+            <div className="login-container">
+                <div className="login">
+                    <h3>Status: {this.props.loggedInStatus} </h3>
+                    <button onClick={this.handleLogoutClick}>Log Out</button>
+                    <br />
+                    <br />
+                    <Registration handleSuccessfulAuth={this.handleSuccessfulAuth} />
+                    <br />
                 
-                <h3>Status: {this.props.loggedInStatus} </h3>
-                <Registration handleSuccessfulAuth={this.handleSuccessfulAuth} />
-                <br />
-               
-                <Login handleSuccessfulAuth={this.handleSuccessfulAuth} />
-                <br />
-                <br />
-                <button onClick={this.handleLogoutClick}>Log Out</button>
+                    <Login handleSuccessfulAuth={this.handleSuccessfulAuth} />
+                    <br />
+                    
+                    
+                </div>
             </div>
         )
     }

@@ -39,7 +39,7 @@ class EventsForm extends React.Component {
 
     render() {
         return( 
-            <div>
+            <div className="new-event-form">
                 <h3>Add A New Tech Event:</h3>
                 <form onSubmit={this.handleOnSubmit}>
                     <label>Title:</label><br />

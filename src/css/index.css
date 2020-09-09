@@ -22,6 +22,7 @@ body {
 .navbar {
   background: #101357;
   height: 150px;
+  padding: -20px;
 }
 
 .navbar-top {
@@ -38,6 +39,29 @@ body {
 
 .navbar-top h3 {
   font-family: 'Permanent Marker', cursive;
+}
+
+.login-container {
+  padding-bottom: 50px;
+  padding-top: 50px;
+  margin-top: 7px;
+  margin-bottom: 0%;
+  background-image: url(../login-01.jpg)  !important;
+    background-position: center center  !important;
+    background-repeat: no-repeat  !important;
+    background-attachment: fixed  !important;
+    background-size: cover  !important;
+}
+.login {
+  width: 42%;
+  margin-left: 28%;
+  background-color: #EDDFD2;
+  padding-bottom: 20px;
+  box-shadow: 5px 10px #888888;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 5px;
+  
 }
 
 input {

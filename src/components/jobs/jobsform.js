@@ -44,8 +44,8 @@ class JobsForm extends React.Component {
     render() {
         // console.log(this.props)
         return(
-            <div>
-                <h3>Add A New Job Posting:</h3>
+            <div className="new-job-form">
+                <h2>Add A New Job Posting:</h2>
                 <form onSubmit={this.handleOnSubmit}>
                     {/* <label>Date:</label><br />
                     <input name="date" type="date" value={this.state.date} onChange={this.handleOnChange}  required/>

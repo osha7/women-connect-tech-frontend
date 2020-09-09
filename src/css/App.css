@@ -6,11 +6,32 @@
   align-items: center;
   text-align: center;
 }
+
+
 .Dashboard {
+  margin-top: -10px;
   width: 100%;
   justify-content: center;
   align-items: center;
   text-align: center;
+  background-image: url(../dashboard-01.jpg)  !important;
+    background-position: center center  !important;
+    background-repeat: no-repeat  !important;
+    background-attachment: fixed  !important;
+    background-size: cover  !important;
+}
+
+.Dashboard button {
+  
+  background-color: #101357;
+  border-radius: 3px;
+  border-width: 2px;
+  color: whitesmoke;
+  border-color: #fea49f;
+  cursor: pointer;
+  height: 30px;
+  width: 80px;
+  font-size: 15px;
 }
 
 .user-info {
@@ -62,8 +83,8 @@
     background-repeat: no-repeat  !important;
     background-attachment: fixed  !important;
     background-size: cover  !important;
-    margin-bottom: 20px;
-
+    padding-bottom: 20px;
+  margin-top: -2.75%;
   width: auto;
   height: auto;
   /* justify-content: center;
@@ -72,7 +93,7 @@
 }
 
 .events-container .add-event-button {
-  height: 75px;
+  height: 65px;
   align-items: center;
   text-align: center;
   /* background-color: #EDDFD2; */
@@ -82,7 +103,7 @@
   background-color: #EDDFD2;
   padding: 20px;
   border-radius: 5px;
-  border-width: 2px;
+  border-width: 3px;
   color: #101357;
   border-color: #101357;
   cursor: pointer;
@@ -96,7 +117,7 @@
   background-color: #101357;
   width: 650px;
   margin-left: 27%;
-
+  font-family: 'Permanent Marker', cursive;
 }
 
 
@@ -110,14 +131,35 @@
   padding-bottom: 100px;
 }
 
+.new-event-form {
+  background-color: #a14639;
+  width: 50%;
+  margin-left: 25%;
+  padding-top: 10px;
+  padding-bottom: 15px;
+  border-style: solid;
+  border-color: #101357;
+  border-width: 1px;
+  border-radius: 5px;
+}
+
+.new-event-form .submit {
+  width: 50%;
+  padding-top: 10px;
+  padding-bottom: 15px;
+}
+/* -------------------------END OF EVENTS----------------------------- */
+
+/* -------------------------JOBS----------------------------- */
 .jobs-container {
   background-image: url(../2nd\ moods\ &\ color\ palettes-01.jpg)  !important;
     background-position: center center  !important;
     background-repeat: no-repeat  !important;
     background-attachment: fixed  !important;
     background-size: cover  !important;
-    margin-bottom: 20px;
+    padding-bottom: 20px;
   /* background-image: url("https://res.cloudinary.com/djsz02nwd/image/upload/v1599615012/womens_conference_pvydli.jpg"); */
+  margin-top: -2.75%;
   width: auto;
   height: auto;
   /* justify-content: center;
@@ -126,7 +168,7 @@
 }
 
 .jobs-container .add-job-button {
-  height: 75px;
+  height: 65px;
   align-items: center;
   text-align: center;
   /* background-color: #EDDFD2; */
@@ -136,7 +178,7 @@
   background-color: #EDDFD2;
   padding: 20px;
   border-radius: 5px;
-  border-width: 2px;
+  border-width: 3px;
   color: #101357;
   border-color: #101357;
   cursor: pointer;
@@ -151,6 +193,7 @@
   background-color: #101357;
   width: 650px;
   margin-left: 27%;
+  font-family: 'Permanent Marker', cursive;
 
 }
 
@@ -164,7 +207,6 @@
 }
 
 .job {
-  
   list-style-type: none;
   /* margin-left: 60px; */
   border-style: solid;
@@ -178,7 +220,25 @@
   /* cursor: pointer; */
 } 
 
+.new-job-form {
+  background-color: #a14639;
+  width: 50%;
+  margin-left: 25%;
+  padding-top: 10px;
+  padding-bottom: 15px;
+  border-style: solid;
+  border-color: #101357;
+  border-width: 1px;
+  border-radius: 5px;
+}
 
+.new-job-form .submit {
+  width: 50%;
+  padding-top: 10px;
+  padding-bottom: 15px;
+}
+
+/* -------------------------END OF JOBS----------------------------- */
 
 .underline-p {
   text-decoration: underline;
