@@ -3,7 +3,8 @@ import React from 'react';
 import axios from 'axios';
 import UserInfo from './user_info'
 import UserForm from './userForm'
-
+import { UserImage } from './usermedia/user_image';
+import { connect } from 'react-redux'
 
 class Dashboard extends React.Component {
 
@@ -33,7 +34,7 @@ class Dashboard extends React.Component {
     // debugger
    
     render() {
-        console.log("dashboard", this.props)
+        // console.log("dashboard", this.props)
         let text = this.state.viewUserForm === true ? "Hide Form" : "Update Your Information"
         if (this.props.user.id) {
             return(
@@ -42,13 +43,15 @@ class Dashboard extends React.Component {
                     <h5>Status: {this.props.loggedInStatus}</h5>
                     <button onClick={this.handleLogoutClick}>Log Out</button>
                     <br /><br />
-                    
-                    {/* <Avatar /> */}
-                    <UserInfo id={this.props.user.id}/>
-                    <button onClick={this.clickForUserForm}>{ text }</button>
+                    <UserImage avatar={this.props.avatar}/>
+                    <br />
+                    <button className="user-info-button" onClick={this.clickForUserForm}>{ text }</button>
                     <div className="toggle-user-form">
                         {this.state.viewUserForm === true ? <UserForm id={this.props.user.id} viewform={this.clickForUserForm}/> : null }
                     </div>
+                    {/* <Avatar /> */}
+                    <UserInfo id={this.props.user.id}/>
+                    
                     <br /><br /><br />
                 </div>
                     
@@ -66,5 +69,11 @@ class Dashboard extends React.Component {
         }
     }
 }
+const mSTP = state => {
+    // console.log("mstp", state)
+    return {
+        avatar: state.usersReducer.users.avatar
+    }
+}
 
-export default Dashboard;
+export default connect(mSTP)(Dashboard);

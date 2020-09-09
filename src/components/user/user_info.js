@@ -1,7 +1,7 @@
 import React from 'react';
 import { getUser } from '../../redux/actions/users/getUser';
 import { connect } from 'react-redux';
-import { UserImage } from './usermedia/user_image';
+
 
 
 class UserInfo extends React.Component {
@@ -18,7 +18,7 @@ class UserInfo extends React.Component {
                 <>
                 <div className="user-info">
                     <br />
-                    <UserImage avatar={this.props.users.avatar}/>
+                    
                     <h1>{this.props.users.first_name} {this.props.users.last_name}</h1>
                     <h5>Goals:</h5> <p>{this.props.users.goals}</p>
                     <h5>Contact Email:</h5> <p><i class="fa fa-envelope-open" aria-hidden="true"></i> {this.props.users.contact}</p>
@@ -28,6 +28,7 @@ class UserInfo extends React.Component {
             
                     <br /><br />
                 </div>
+                <br />
                 <table className="users-availability-table" key={this.props.users.id}>
                     <tbody>
                         <th>Available To Work</th><th>Open To Connect</th><th>Open To Mentor</th>
