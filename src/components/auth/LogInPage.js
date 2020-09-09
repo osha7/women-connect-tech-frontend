@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
-import Registration from './auth/Registration'
-import Login from './auth/Login'
+import Registration from './Registration'
+import Login from './Login'
 
 class Home extends React.Component {
     // console notified this was a useless constructor
@@ -34,7 +34,7 @@ class Home extends React.Component {
                 <h3>Status: {this.props.loggedInStatus} </h3>
                 <Registration handleSuccessfulAuth={this.handleSuccessfulAuth} />
                 <br />
-                <br />
+               
                 <Login handleSuccessfulAuth={this.handleSuccessfulAuth} />
                 <br />
                 <br />

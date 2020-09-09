@@ -38,7 +38,7 @@ const NavBar = () => {
         activeStyle={{
           background: "#fbaf08"
         }}
-      >Women Connect In Tech</NavLink>
+      ><h3>Women Connect In Tech</h3></NavLink>
 
         <NavLink
             to="/events"

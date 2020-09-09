@@ -54,7 +54,7 @@ class Login extends Component {
     render() {
         return (
             <div className="Login">
-                Log In
+                <h2><strong>Log In</strong></h2>
                 <form onSubmit={this.onSubmitHandler}>
 
                 <input
@@ -88,7 +88,7 @@ class Login extends Component {
                 <br />
 
                 {/* <Link to="/registration">Registration</Link> */}
-
+                <br />
                 <button type="submit">Log In</button>
 
              </form>

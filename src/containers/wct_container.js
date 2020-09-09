@@ -13,7 +13,7 @@ class WomenConnect extends React.Component {
             </div>
             <br /> */}
             <div className="wct-sub-container">
-            <h1>Women Connect in TECH!</h1>
+            <h1></h1>
                 <WTConnect />
             </div>
         </div>

@@ -94,6 +94,9 @@ grid-auto-rows: auto; */
     font-size: 11px;
     
   }
+  .card-front img {
+    border-bottom: 7px solid #fbaf08;
+  }
   
   .card-back {
     

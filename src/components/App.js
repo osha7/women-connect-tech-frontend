@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import axios from 'axios';
 
-import LogIn from './LogInPage';
+import LogIn from './auth/LogInPage';
 import Dashboard from './user/Dashboard';
 import NavBar from './navbar'
 import WomenConnect from '../containers/wct_container'

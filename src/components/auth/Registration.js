@@ -58,7 +58,7 @@ class Registration extends Component {
     render() {
         return (
             <div className="Registration">
-                Registration
+                <h2>Register</h2>
                 <form onSubmit={this.onSubmitHandler}>
 
                 <input
