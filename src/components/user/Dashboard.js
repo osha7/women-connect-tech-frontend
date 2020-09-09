@@ -4,6 +4,7 @@ import axios from 'axios';
 import UserInfo from './user_info'
 import UserForm from './userForm'
 
+
 class Dashboard extends React.Component {
 
     state = {
@@ -22,17 +23,17 @@ class Dashboard extends React.Component {
         .then(response => {
             console.log("logout response", response)
             this.props.handleLogout()
+            this.props.history.push("/login")
         })
         .catch(error => {
             console.log("logout error", error)
 
         })
-        // this.props.handleLogout()
     }
     // debugger
    
     render() {
-        // console.log(this.props)
+        console.log("dashboard", this.props)
         let text = this.state.viewUserForm === true ? "Hide Form" : "Update Your Information"
         if (this.props.user.id) {
             return(
