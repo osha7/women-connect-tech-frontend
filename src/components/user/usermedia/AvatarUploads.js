@@ -22,6 +22,7 @@ export default class AvatarUploads extends React.Component {
 
     onSubmit = (e) => {
         e.preventDefault()
+        console.log("onSubmit here")
     
         let body = new FormData()
         // debugger
@@ -50,23 +51,11 @@ export default class AvatarUploads extends React.Component {
         })
     }
 
-    // function imgUploadHandler(e){
-    //     e.preventDefault()
-    //     const body = new FormData()
-    //     const newImg = document.querySelector("#img").files[0]
-    //     body.append('file', newImg)
-    //     body.append('user_id', state.user.id)
-    //     fetch("http://localhost:3000/api/v1/img-upload",{
-    //       method: "PUT",
-    //       body
-    //     })
-    //   }
-
     render(){
         return (
             <div className="form">
-                <h3>New Upload</h3>
-                <form id="edit-img-form" class="form" action="" onSubmit={this.onSubmit}>
+                <h3>Image Upload</h3>
+                <form id="edit-img-form" className="form" action="" onSubmit={this.onSubmit}>
                     <label>Image Upload</label>
                     <input type="file"name="image" onChange={this.onChange} accept="image/*"/>
                     <br/>

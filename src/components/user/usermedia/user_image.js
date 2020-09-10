@@ -1,7 +1,6 @@
 import React from 'react';
-// import {Image, Transformation, CloudinaryContext} from 'cloudinary-react';
-import Image from 'react-bootstrap/Image'
-import Container from 'react-bootstrap/Container'
+import {Image, Transformation, CloudinaryContext} from 'cloudinary-react';
+
 
 export const UserImage = (props) => {
     // let image 
@@ -20,6 +19,9 @@ export const UserImage = (props) => {
 
     return(
         <div className="user-image-square">
+            {/* <Image publicId={props.avatar.image} cloud_name="djsz02nwd">
+                <Transformation height="250" width="250" radius="2" gravity="faces" crop="fill"  />
+            </Image>  */}
             <img className="user-avatar" src={props.avatar.link} alt={props.avatar.id} />
             {/* <img className="user-avatar" src={props.avatar.image} alt={props.avatar.id} /> */}
         </div>
@@ -32,8 +34,4 @@ export const UserImage = (props) => {
 }
 
 
-  {/* <Image publicId={String(props.id)} >
-                <Transformation height="5" width="5" radius="2" />
-                <Transformation overlay="text:arial_60:This is my picture" gravity="north" y="20" /> */}
-                {/* <Transformation angle="20" />
-            </Image>  */}
+  

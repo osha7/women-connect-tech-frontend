@@ -75,7 +75,7 @@ class App extends React.Component {
           <Route exact path="/events" render={props => ( <EventsContainer { ...props } user={this.state.user} />  )} />
           <Route exact path="/jobs" render={props => ( <JobsContainer { ...props } user={this.state.user} />  )} />
         </div>
-        {console.log("app", this.props)}
+        {/* {console.log("app", this.props)} */}
         <Switch>
           {/* <Route exact path={'/'} component={Home} /> */}
           <Route 

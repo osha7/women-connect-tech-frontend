@@ -25,7 +25,21 @@ Run 'npm start -p 3002' to start the application. The application MUST be starte
 Contributing
 Bug reports and pull requests are welcome on GitHub at https://github.com/osha7/women-connect-tech-frontend. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the Contributor Covenant code of conduct.
 
-License
+--------Project Trello / Youtube / Medium Blog / Diagrams.net-------------------------------
+
+program initial diagram:
+https://app.diagrams.net/#G1DE65bWCNTn7qYGnEdA4PAABHwh4d-Qx9
+
+Trello:
+https://trello.com/b/YnMUK99T/proj-5-react-redux
+
+Youtube:
+https://www.youtube.com/watch?v=z4KV9bb7zLI
+
+Blog (Cloudinary Image Upload w/React & Rails):
+https://medium.com/@ogroetz/react-js-uploading-images-using-cloudinary-33b992cc21e4
+
+-------- License -------
 This project is available as open source under the terms of the MIT License.
 
 Code of Conduct
