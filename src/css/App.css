@@ -21,6 +21,13 @@
     background-size: cover  !important;
 }
 
+/* .user-image-square { 
+  background: 50% 50% no-repeat; 
+  width: 100%;
+  height: 100%;
+  margin-left: 50%;
+} */
+
 .Dashboard button {
   
   background-color: #101357;

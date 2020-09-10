@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import editUser from '../../redux/actions/users/editUser'
+// import {Image, Transformation, CloudinaryContext} from 'cloudinary-react';
 
 class UserForm extends React.Component {
     
@@ -85,7 +86,7 @@ class UserForm extends React.Component {
                     <label>Last Name:</label><br />
                     <input name="last_name" type="text" value={last_name || ''} onChange={this.handleOnChange} />
                     <br />
-                    <label>Goals:</label><br />
+                    <label>Profession:</label><br />
                     <textarea name="goals" value={goals || ''} onChange={this.handleOnChange} maxlength="60"/>
                     <br />
                     <label>Resume Link:</label><br />
@@ -93,6 +94,14 @@ class UserForm extends React.Component {
                     <br />
                     <label>Image Link:</label><br />
                     <input name="avatar" type="text" value={avatar} onChange={this.handleOnChange} />
+                    <br />
+                     {/* <label>Image Upload</label>
+                    <input type="file"name="image" onChange={this.onChange} accept="image/*"/>
+                    <br/> */}
+                    {/* <label>Video Upload</label>
+                    <input type="file" name="video" onChange={this.onChange}/>
+                    <br/> */}
+
                     <br />
                     <label>Website:</label><br />
                     <input name="website" type="text" value={website || ''} onChange={this.handleOnChange} />
@@ -137,6 +146,7 @@ class UserForm extends React.Component {
                     <br /><br />
                     <input type="submit"/>
                     <br /><br /><br />
+
                 </form>
             </div>
         )

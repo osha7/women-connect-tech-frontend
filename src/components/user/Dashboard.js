@@ -5,6 +5,7 @@ import UserInfo from './user_info'
 import UserForm from './userForm'
 import { UserImage } from './usermedia/user_image';
 import { connect } from 'react-redux'
+import Avatar from './usermedia/AvatarUploads'
 
 class Dashboard extends React.Component {
 
@@ -43,13 +44,14 @@ class Dashboard extends React.Component {
                     <h5>Status: {this.props.loggedInStatus}</h5>
                     <button onClick={this.handleLogoutClick}>Log Out</button>
                     <br /><br />
-                    <UserImage avatar={this.props.avatar}/>
+                    {/* <Avatar id={this.props.user.id}/> */}
+                    <UserImage avatar={this.props.avatar} id={this.props.user.id} />
                     <br />
                     <button className="user-info-button" onClick={this.clickForUserForm}>{ text }</button>
                     <div className="toggle-user-form">
                         {this.state.viewUserForm === true ? <UserForm id={this.props.user.id} viewform={this.clickForUserForm}/> : null }
                     </div>
-                    {/* <Avatar /> */}
+                    {/* <Avatar id={this.props.user.id}/> */}
                     <UserInfo id={this.props.user.id}/>
                     
                     <br /><br /><br />
