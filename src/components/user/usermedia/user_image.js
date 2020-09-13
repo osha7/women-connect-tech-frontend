@@ -1,5 +1,5 @@
 import React from 'react';
-import {Image, Transformation, CloudinaryContext} from 'cloudinary-react';
+// import {Image, Transformation, CloudinaryContext} from 'cloudinary-react';
 
 
 export const UserImage = (props) => {

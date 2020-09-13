@@ -10,10 +10,9 @@ class WomenConnect extends React.Component {
         <div className="wct-container" >
             {/* <div className="wct-header">
                 
-            </div>
-            <br /> */}
+            </div> */}
+            <br /> <br /> 
             <div className="wct-sub-container">
-            <h1></h1>
                 <WTConnect />
             </div>
         </div>

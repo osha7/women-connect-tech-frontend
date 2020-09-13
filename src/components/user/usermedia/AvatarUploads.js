@@ -1,6 +1,6 @@
 import React from 'react';
 // import {Image, Transformation, CloudinaryContext} from 'cloudinary-react';
-import { FormName } from 'redux-form';
+
 
 export default class AvatarUploads extends React.Component {
 

@@ -8,6 +8,10 @@ import moment from 'moment';
 
 class Event extends React.Component {
 
+    state = {
+        likes: 0
+    }
+
     handleOnClick = () => {
         this.props.boundDeleteEvent(this.props.id)
     }
@@ -16,6 +20,12 @@ class Event extends React.Component {
 
     onSubmit = event => {
         event.preventDefault()
+    }
+
+    handleLike = () => {
+        this.setState(prevState => ({
+            likes: prevState.likes + 1
+        }))
     }
     
     render() {
@@ -35,6 +45,8 @@ class Event extends React.Component {
                     <EditEventContainer triggerText={this.triggerText} onSubmit={this.onSubmit} id={this.props.id} />
                     <button className="delete-button" onClick={this.handleOnClick}>Delete</button>
                     <br />
+                    <button className="likes-button" onClick={this.handleLike}>Add Like</button>
+                    {this.state.likes}
                 </div>
             )
         } else {
@@ -50,6 +62,9 @@ class Event extends React.Component {
                     <i>Contact Person:</i>   {this.props.contact_person}<br />
                     <i>Contact Email:</i>   {this.props.email}<br />
                     <br />
+                    <button className="likes-button" onClick={this.handleLike}>Add Like</button>
+                    <br />
+                    {this.state.likes}
                 </div>
             )
         }

@@ -1,15 +1,18 @@
 import React from 'react';
 import Job from './job';
-import { getJobs } from '../../redux/actions/jobs/getJobs';
+// import { getJobs } from '../../redux/actions/jobs/getJobs';
 import { connect } from 'react-redux';
 import deleteJob from '../../redux/actions/jobs/deleteJob'
-import editJob from '../../redux/actions/jobs/editJob'
+// import editJob from '../../redux/actions/jobs/editJob'
+
 
 class JobsBoard extends React.Component {
 
-    componentDidMount = () => {
-        this.props.boundGetJobs()
-    }
+    
+
+    // componentDidMount = () => {
+    //     this.props.boundGetJobs()
+    // }
 
     render() {
         // console.log("jobsboard", this.props)
@@ -31,27 +34,27 @@ class JobsBoard extends React.Component {
             boundEditJob={this.props.boundEditJob} 
         />)
         return (
-            <div className="available-jobs">
-                <ul>{ j }</ul>
-            </div>
+                <div className="available-jobs">
+                    <ul>{ j }</ul>
+                </div>
         )
     }
 }
 
-const mapStateToProps = (state) => {
-    // console.log("test jobs", state)
-    return {
-        jobs: state.jobsReducer.jobs
-    }
-}
+// const mapStateToProps = (state) => {
+//     // console.log("test jobs", state)
+//     return {
+//         jobs: state.jobsReducer.jobs
+//     }
+// }
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        boundGetJobs: (jobs) => dispatch(getJobs(jobs)),
-        boundEditJob: (id) => dispatch(editJob(id)),
+        // boundGetJobs: (jobs) => dispatch(getJobs(jobs)),
+        // boundEditJob: (id) => dispatch(editJob(id)),
         boundDeleteJob: (id) => dispatch(deleteJob(id))
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(JobsBoard)
+export default connect(null, mapDispatchToProps)(JobsBoard)
 //  ^^ connect gives us access to dispatch and state from inside of a component

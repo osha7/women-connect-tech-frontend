@@ -5,7 +5,7 @@ import UserInfo from './user_info'
 import UserForm from './userForm'
 import { UserImage } from './usermedia/user_image';
 import { connect } from 'react-redux'
-import Avatar from './usermedia/AvatarUploads'
+// import Avatar from './usermedia/AvatarUploads'
 
 class Dashboard extends React.Component {
 
@@ -15,6 +15,8 @@ class Dashboard extends React.Component {
 
     clickForUserForm = () => {
         // console.log(state)
+        // previousState is the argument given to setState that is the value of state before setState was called
+        // important bc of batching
         this.setState(previousState => ({
             viewUserForm: previousState.viewUserForm === true ? false : true
          }))

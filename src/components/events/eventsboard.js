@@ -8,7 +8,9 @@ import deleteEvent from '../../redux/actions/events/deleteEvent';
 class EventsBoard extends React.Component {
 
     componentDidMount = () => {
+        console.log("a")
         this.props.boundGetEvents()
+        console.log("b")
     }
 
     render() {
