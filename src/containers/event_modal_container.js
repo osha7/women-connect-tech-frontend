@@ -13,6 +13,7 @@ export class Container extends React.Component {
     };
     
     closeModal = () => {
+      // debugger
       this.setState({ isShown: false });
       this.TriggerButton.focus();
       this.toggleScrollLock();

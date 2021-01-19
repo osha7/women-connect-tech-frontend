@@ -11,8 +11,6 @@ import WomenConnect from '../containers/wct_container'
 import EventsContainer from '../containers/events_container'
 import JobsContainer from '../containers/jobs_container';
 
-
-
 class App extends React.Component {
 
   constructor(props) {
